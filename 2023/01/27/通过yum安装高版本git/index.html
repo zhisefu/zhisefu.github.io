@@ -45,7 +45,7 @@
         content="2023-01-27">
       <meta 
         property="og:article:modified_time" 
-        content="2023-01-27">
+        content="2023-02-03">
       <meta 
         property="og:article:author" 
         content="置啬夫">
@@ -319,7 +319,7 @@
     style="padding-right: 2px;">
   </i>目录
 </div>
-<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text">问题描述</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-number">2.</span> <span class="toc-text">解决方案</span></a></li></ol>
+
       </div>
     </article>
   
@@ -428,7 +428,7 @@
     
     
       <span class="dot"></span>
-      <span>246 字</span>
+      <span>0 字</span>
     
   </div>
   
@@ -464,38 +464,7 @@
   <div 
     id="section" 
     class="post-content">
-    <h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>直接使用<code>yum install -y git-all</code>，安装的 git 版本会比较老。</p>
-<p>对此，官方文档说明如下，</p>
-<blockquote>
-<p>Red Hat Enterprise Linux, Oracle Linux, CentOS, Scientific Linux, et al.<br>RHEL and derivatives typically ship older versions of git. You can download a tarball and build from source, or use a 3rd-party repository such as the IUS Community Project to obtain a more recent version of git.</p>
-</blockquote>
-<p><a target="_blank" rel="noopener" href="https://git-scm.com/download/linux">https://git-scm.com/download/linux</a></p>
-<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>根据上述官方文档的描述，解决办法就是：</p>
-<ol>
-<li>通过源码构建；</li>
-<li>使用第三方安装源。</li>
-</ol>
-<p>这里以使用第三方源 <a target="_blank" rel="noopener" href="https://ius.io/">IUS Community Project</a> 为例，安装 git 步骤如下，</p>
-<ol>
-<li><p>检查 git 是否已经安装</p>
-<pre class="highlight"><span class="line">sudo yum list installed git*</span><br></pre>
-
-<p>如果 git 已经安装，先删除，</p>
-<pre class="highlight"><span class="line">sudo yum remove -y git*</span><br></pre>
-</li>
-<li><p>更新 yum 源</p>
-<pre class="highlight"><span class="line">yum install \</span><br><span class="line">https://repo.ius.io/ius-release-el7.rpm \</span><br><span class="line">https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm</span><br></pre>
-
-<p><a target="_blank" rel="noopener" href="https://ius.io/setup">https://ius.io/setup</a></p>
-</li>
-<li><p>安装 git</p>
-<pre class="highlight"><span class="line">sudo yum install -y git236</span><br></pre>
-
-<p>其中，<code>git236</code>是 <a target="_blank" rel="noopener" href="https://ius.io/">IUS Community Project</a> 中的项目；更多 IUS 项目可以在 <a target="_blank" rel="noopener" href="https://github.com/search?q=org:iusrepo+topic:rpm&type=repositories">https://github.com/search?q=org%3Aiusrepo+topic%3Arpm&amp;type=repositories</a> 中查找。</p>
-</li>
-</ol>
-<p><br/>—end—<br/></p>
-
+    
   </div>
   <div>
     
@@ -551,7 +520,7 @@
     style="padding-right: 2px;">
   </i>目录
 </div>
-<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text">问题描述</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-number">2.</span> <span class="toc-text">解决方案</span></a></li></ol>
+
 </div>
             </main>
             <aside class="right-column">
@@ -565,7 +534,7 @@
     style="padding-right: 2px;">
   </i>目录
 </div>
-<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text">问题描述</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-number">2.</span> <span class="toc-text">解决方案</span></a></li></ol>
+
     </article>
   
   
