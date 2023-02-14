@@ -1,785 +1,191 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-  <head>
+<html lang="en">
+<head>
   <meta charset="UTF-8">
-  <meta 
-    name="viewport"
-    content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <meta 
-    http-equiv="X-UA-Compatible" 
-    content="ie=edge">
-  <meta 
-    name="theme-color" 
-    content="#fff" 
-    id="theme-color">
-  <meta 
-    name="description" 
-    content="置啬夫">
-  <link 
-    rel="icon" 
-    href="/">
-  <title>yum常用命令</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="keywords" content="hexo,个人博客,blog" />
+  <meta name="description" content="某某的个人博客" />
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
+  <link rel="dns-prefetch" href="https://at.alicdn.com">
   
-    
-      <meta 
-        property="og:title" 
-        content="yum常用命令">
-    
-    
-      <meta 
-        property="og:url" 
-        content="https://zhisefu.com/2023/01/27/yum%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/index.html">
-    
-    
-      <meta 
-        property="og:img" 
-        content="https://img.songhn.com/img/Y67gdd.png">
-    
-    
-    
-      <meta 
-        property="og:type" 
-        content="article">
-      <meta 
-        property="og:article:published_time" 
-        content="2023-01-27">
-      <meta 
-        property="og:article:modified_time" 
-        content="2023-01-27">
-      <meta 
-        property="og:article:author" 
-        content="置啬夫">
-      
-        
-          <meta 
-            property="og:article:tag" 
-            content="L1">
-        
-          <meta 
-            property="og:article:tag" 
-            content="yum">
-        
-      
-    
+  <link rel="dns-prefetch" href="https://widget.daovoice.io">
+  <link rel="dns-prefetch" href="https://widget-static-cdn.daovoice.io">
+  <link rel="dns-prefetch" href="https://im.daovoice.io">
   
   
-  <link rel="preload" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css" as="style" >
-  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
-  <link rel="preload" href="/css/main.css" as="style" >
-  
-  <link rel="modulepreload" href="//instant.page/5.1.0">
-  
-  <link rel="stylesheet" href="/css/main.css">
-  
-  <link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css">
-  
-  <link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+  <link rel="dns-prefetch" href="https://hm.baidu.com/">
   
   
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="https://api.github.com">
+  <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com">
   
-    <link rel="stylesheet" href="/js/lib/lightbox/baguetteBox.min.css">
+  <link rel="stylesheet" type="text/css" href="/./style/main.css">
+	<link rel="shortcut icon" href="/favicon.ico" title="Favicon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+	<title>yum常用命令</title>
   
-  <script>
-    function loadScript(url, cb) {
-      var script = document.createElement('script');
-      script.src = url;
-      if (cb) script.onload = cb;
-      script.async = true;
-      document.body.appendChild(script);
-    }
-    function loadCSS(href, data, attr) {
-      var sheet = document.createElement('link');
-      sheet.ref = 'stylesheet';
-      sheet.href = href;
-      sheet.dataset[data] = attr;
-      document.head.appendChild(sheet);
-    }
-    function changeCSS(cssFile, data, attr) {
-      var oldlink = document.querySelector(data);
-      var newlink = document.createElement("link");
-      newlink.setAttribute("rel", "stylesheet");
-      newlink.setAttribute("href", cssFile);
-      newlink.dataset.prism = attr;
-      document.head.replaceChild(newlink, oldlink);
-    }
+  <script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?awwssw1snsnsnn1ndndnndnd99j";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();
   </script>
   
-    
   
-  <script>
-    // control reverse button
-    var reverseDarkList = {
-      dark: 'light',
-      light: 'dark'
-    };
-    var themeColor = {
-      dark: '#1c1c1e',
-      light: '#fff'
-    }
-    // get the data of css prefers-color-scheme
-    var getCssMediaQuery = function() {
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    };
-    // reverse current darkmode setting function
-    var reverseDarkModeSetting = function() {
-      var setting = localStorage.getItem('user-color-scheme');
-      if(reverseDarkList[setting]) {
-        setting = reverseDarkList[setting];
-      } else if(setting === null) {
-        setting = reverseDarkList[getCssMediaQuery()];
-      } else {
-        return;
-      }
-      localStorage.setItem('user-color-scheme', setting);
-      return setting;
-    };
-    // apply current darkmode setting
+    <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/123456.js","daovoice");daovoice('init',{app_id: "123456"});daovoice('update');
   </script>
-  
-    <script>
-      var setDarkmode = function(mode) {
-      var setting = mode || localStorage.getItem('user-color-scheme');
-      if(setting === getCssMediaQuery()) {
-        document.documentElement.removeAttribute('data-user-color-scheme');
-        localStorage.removeItem('user-color-scheme');
-        document.getElementById('theme-color').content = themeColor[setting];
-        document.getElementById('theme-color').dataset.mode = setting;
-      } else if(reverseDarkList[setting]) {
-        document.documentElement.setAttribute('data-user-color-scheme', setting);
-        document.getElementById('theme-color').content = themeColor[setting];
-        document.getElementById('theme-color').dataset.mode = setting;
-      } else {
-        document.documentElement.removeAttribute('data-user-color-scheme');
-        localStorage.removeItem('user-color-scheme');
-        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
-        document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
-      }
-    };
-    setDarkmode();
-    </script>
-  
-  
-  
-    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.js" as="script">
-    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.css" as="style" >
-  
-  
-    <link rel="preload" href="/js/lib/lozad.min.js" as="script">
-  
-  
-  
-  
-  
   
 <meta name="generator" content="Hexo 6.3.0"></head>
-
-  <body>
-    <div class="wrapper">
-       
-      <nav class="navbar">
-  <div class="navbar-logo">
-    <a class="navbar-logo-main" href="/">
-      
-      <span class="navbar-logo-dsc">山居杂记</span>
-      </a>
-  </div>
-  <div class="navbar-menu">
-    
-      <a 
-        href="/" 
-        class="navbar-menu-item">
-        
-          首页
-        
-      </a>
-    
-      <a 
-        href="/archives" 
-        class="navbar-menu-item">
-        
-          归档
-        
-      </a>
-    
-      <a 
-        href="/tags" 
-        class="navbar-menu-item">
-        
-          标签
-        
-      </a>
-    
-      <a 
-        href="/categories" 
-        class="navbar-menu-item">
-        
-          分类
-        
-      </a>
-    
-      <a 
-        href="/about" 
-        class="navbar-menu-item">
-        
-          关于
-        
-      </a>
-    
-      <a 
-        href="/links" 
-        class="navbar-menu-item">
-        
-          友链
-        
-      </a>
-    
-    <button 
-      class="navbar-menu-item darknavbar navbar-menu-btn" 
-      aria-label="Toggle dark mode"
-      id="dark">
-      <i class="iconfont icon-weather"></i>
-    </button>
-    <button 
-      class="navbar-menu-item searchnavbar navbar-menu-btn" 
-      aria-label="Toggle search"
-      id="search">
-      <!-- <i 
-        class="iconfont icon-search" 
-        style="font-size: 1.2rem; font-weight: 400;">
-      </i> -->
-      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
-        class="iconify iconify--ion" width="28" height="28" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
-        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
-          d="M256 80a176 176 0 1 0 176 176A176 176 0 0 0 256 80Z"></path>
-        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
-          d="M232 160a72 72 0 1 0 72 72a72 72 0 0 0-72-72Z"></path>
-        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="28"
-          d="M283.64 283.64L336 336"></path>
-      </svg>
-    </button>
-  </div>
-</nav> 
-      
-      <div 
-        id="local-search" 
-        style="display: none">
-        <input
-          class="navbar-menu-item"
-          id="search-input"
-          placeholder="请输入搜索内容..." />
-        <div id="search-content"></div>
-      </div>
-      
-      <div class="section-wrap">
-        <div class="container">
-          <div class="columns">
-            <aside class="left-column">
-              
-              <div class="card card-author">
-                
-  <img 
-    src="https://img.songhn.com/img/Y67gdd.png" 
-    class="author-img"
-    width="88"
-    height="88"
-    alt="author avatar">
-
-<p class="author-name">置啬夫</p>
-<p class="author-description">写着玩的</p>
-<div class="author-message">
-  <a 
-    class="author-posts-count" 
-    href="/archives">
-    <span>3</span>
-    <span>文章</span>
-  </a>
-  <a 
-    class="author-categories-count" 
-    href="/categories">
-    <span>3</span>
-    <span>分类</span>
-  </a>
-  <a 
-    class="author-tags-count" 
-    href="/tags">
-    <span>3</span>
-    <span>标签</span>
+<body>
+  <canvas id="pattern-placeholder" height="230"></canvas>
+<div class="navbar-header">
+  <a class="blog-title" href="/">置啬夫</a>
+  <a class="face-img" href="/">
+    <img src="https://tva3.sinaimg.cn/crop.0.0.200.200.180/005Kc3C1jw8f2uep0hhkvj305k05k3yk.jpg">
   </a>
 </div>
+<main>
+  <div class="article-title">
+    
+  
+  <h1 class="title">
+    yum常用命令
+  </h1>
+  
 
-              </div>
-               <div class="sticky-tablet">
-  
-  
-    <article class="display-when-two-columns spacer">
-      <div class="card card-content toc-card">
-        <div class="toc-header">
-  <i 
-    class="iconfont icon-menu" 
-    style="padding-right: 2px;">
-  </i>目录
-</div>
-<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B"><span class="toc-number">1.</span> <span class="toc-text">查看</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%97%E5%87%BA%E6%89%80%E6%9C%89%E5%B7%B2%E7%BB%8F%E5%AE%89%E8%A3%85%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%8C%85"><span class="toc-number">1.1.</span> <span class="toc-text">列出所有已经安装的软件包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%97%E5%87%BA%E6%9F%90%E4%B8%AA%E5%B7%B2%E7%BB%8F%E5%AE%89%E8%A3%85%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%8C%85"><span class="toc-number">1.2.</span> <span class="toc-text">列出某个已经安装的软件包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%97%E5%87%BA%E6%9F%90%E4%B8%AA%E5%B7%B2%E7%BB%8F%E5%AE%89%E8%A3%85%E5%92%8C%E5%8F%AF%E4%BB%A5%E5%AE%89%E8%A3%85%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%8C%85"><span class="toc-number">1.3.</span> <span class="toc-text">列出某个已经安装和可以安装的软件包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%97%E5%87%BA%E6%89%80%E6%9C%89%E5%8F%AF%E6%9B%B4%E6%96%B0%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%8C%85"><span class="toc-number">1.4.</span> <span class="toc-text">列出所有可更新的软件包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%97%E5%87%BA%E5%8F%AF%E5%AE%89%E8%A3%85%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%8C%85"><span class="toc-number">1.5.</span> <span class="toc-text">列出可安装的软件包</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">2.</span> <span class="toc-text">安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%9F%90%E4%B8%AA%E8%BD%AF%E4%BB%B6%E5%8C%85%E5%92%8C%E7%9B%B8%E5%85%B3%E4%BE%9D%E8%B5%96%E5%8C%85"><span class="toc-number">2.1.</span> <span class="toc-text">安装某个软件包和相关依赖包</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%A0%E9%99%A4"><span class="toc-number">3.</span> <span class="toc-text">删除</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E6%9F%90%E4%B8%AA%E5%B7%B2%E7%BB%8F%E5%AE%89%E8%A3%85%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%8C%85"><span class="toc-number">3.1.</span> <span class="toc-text">删除某个已经安装的软件包</span></a></li></ol></li></ol>
-      </div>
-    </article>
-  
-  
-  <article class="card card-content categories-widget">
-    <div class="categories-card">
-  <div class="categories-header">
-    <i 
-      class="iconfont icon-fenlei" 
-      style="padding-right: 2px;">
-    </i>分类
-  </div>
-  <div class="categories-list">
-    
-      <a href="/categories/%E5%9F%BA%E7%A1%80%E5%B7%A5%E5%85%B7/">
-        <div class="categories-list-item">
-          基础工具
-          <span class="categories-list-item-badge">3</span>
-        </div>
-      </a>
-    
-      <a href="/categories/%E5%9F%BA%E7%A1%80%E5%B7%A5%E5%85%B7/git/">
-        <div class="categories-list-item">
-          基础工具/git
-          <span class="categories-list-item-badge">2</span>
-        </div>
-      </a>
-    
-      <a href="/categories/%E5%9F%BA%E7%A1%80%E5%B7%A5%E5%85%B7/yum/">
-        <div class="categories-list-item">
-          基础工具/yum
-          <span class="categories-list-item-badge">1</span>
-        </div>
-      </a>
-    
-  </div>
-</div>
-  </article>
-  
-  <article class="card card-content tags-widget">
-    <div class="tags-card">
-  <div class="tags-header">
-    <i 
-      class="iconfont icon-biaoqian" 
-      style="padding-right: 2px;">
-    </i>热门标签
-  </div>
-  <div class="tags-list">
-    
-      <a 
-        href="/tags/L1/" 
-        title="L1">
-        <div class="tags-list-item">L1</div>
-      </a>
-    
-      <a 
-        href="/tags/git/" 
-        title="git">
-        <div class="tags-list-item">git</div>
-      </a>
-    
-      <a 
-        href="/tags/yum/" 
-        title="yum">
-        <div class="tags-list-item">yum</div>
-      </a>
-    
-  </div>
-</div>
-  </article>
-  
-  
-</div>
-            </aside>
-            <main class="main-column">
-              
-<article class="card card-content">
-  <header>
-    <h1 class="post-title">
-      yum常用命令
-    </h1>
-  </header>
-  <div class="post-meta post-show-meta">
-    <time datetime="2023-01-27T13:57:46.000Z">
-      <i 
-        class="iconfont icon-calendar" 
-        style="margin-right: 2px;">
-      </i>
-      <span>2023-01-27</span>
-    </time>
-    
-      <span class="dot"></span>
-      
-        <a 
-          href="/categories/%E5%9F%BA%E7%A1%80%E5%B7%A5%E5%85%B7/" 
-          class="post-meta-link">
-          基础工具
-        </a>
-      
-        <a 
-          href="/categories/%E5%9F%BA%E7%A1%80%E5%B7%A5%E5%85%B7/yum/" 
-          class="post-meta-link">
-          yum
-        </a>
-      
-    
-    
-      <span class="dot"></span>
-      <span>189 字</span>
-    
-  </div>
-  
-    <div 
-      class="post-meta post-show-meta" 
-      style="margin-top: -10px;">
-      <div style="display: flex; align-items: center;">
-        <i 
-          class="iconfont icon-biaoqian" 
-          style="margin-right: 2px; font-size: 1.15rem;">
-        </i>
+
+    <ul class="article-info">
+      <li>
+        发布
+        <time datetime="2023-01-27T13:57:46.000Z" itemprop="datePublished">2023-01-27</time>
+      </li>
+      <li>
         
-          
-          <a 
-            href="/tags/L1/" 
-            class="post-meta-link">
-            L1
-          </a>
+    更新 <time datetime="2023-01-27T14:11:57.205Z" itemprop="dateUpdated">2023-01-27</time>
+
+      </li>
+      <li id="busuanzi_container_page_pv">
+        阅读 <span id="busuanzi_value_page_pv"></span>
+      </li>
+    </ul>
+  </div>
+  <div class="container">
+    <div class="article">
+      <div class="content">
         
-          
-            <span class="dot"></span>
-          
-          <a 
-            href="/tags/yum/" 
-            class="post-meta-link">
-            yum
-          </a>
-        
-      </div>
-    </div>
-  
-  </header>
-  <div 
-    id="section" 
-    class="post-content">
-    <h1 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h1><h2 id="列出所有已经安装的软件包"><a href="#列出所有已经安装的软件包" class="headerlink" title="列出所有已经安装的软件包"></a>列出所有已经安装的软件包</h2><pre class="highlight"><span class="line">yum list installed</span><br></pre>
+        <h1 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h1><h2 id="列出所有已经安装的软件包"><a href="#列出所有已经安装的软件包" class="headerlink" title="列出所有已经安装的软件包"></a>列出所有已经安装的软件包</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum list installed</span><br></pre></td></tr></table></figure>
 
 <h2 id="列出某个已经安装的软件包"><a href="#列出某个已经安装的软件包" class="headerlink" title="列出某个已经安装的软件包"></a>列出某个已经安装的软件包</h2><p>以 git 为例，</p>
-<pre class="highlight"><span class="line">yum list installed git*</span><br></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum list installed git*</span><br></pre></td></tr></table></figure>
 
 <h2 id="列出某个已经安装和可以安装的软件包"><a href="#列出某个已经安装和可以安装的软件包" class="headerlink" title="列出某个已经安装和可以安装的软件包"></a>列出某个已经安装和可以安装的软件包</h2><p>以 git 为例，</p>
-<pre class="highlight"><span class="line">yum list git*</span><br></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum list git*</span><br></pre></td></tr></table></figure>
 
-<h2 id="列出所有可更新的软件包"><a href="#列出所有可更新的软件包" class="headerlink" title="列出所有可更新的软件包"></a>列出所有可更新的软件包</h2><pre class="highlight"><span class="line">yum list updates</span><br></pre>
+<h2 id="列出所有可更新的软件包"><a href="#列出所有可更新的软件包" class="headerlink" title="列出所有可更新的软件包"></a>列出所有可更新的软件包</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum list updates</span><br></pre></td></tr></table></figure>
 
 <h2 id="列出可安装的软件包"><a href="#列出可安装的软件包" class="headerlink" title="列出可安装的软件包"></a>列出可安装的软件包</h2><p>以 git 为例，</p>
-<pre class="highlight"><span class="line">yum search git</span><br></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum search git</span><br></pre></td></tr></table></figure>
 
 <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h2 id="安装某个软件包和相关依赖包"><a href="#安装某个软件包和相关依赖包" class="headerlink" title="安装某个软件包和相关依赖包"></a>安装某个软件包和相关依赖包</h2><p>以 git 为例，</p>
-<pre class="highlight"><span class="line">yum install -y git</span><br></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y git</span><br></pre></td></tr></table></figure>
 
 <h1 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h1><h2 id="删除某个已经安装的软件包"><a href="#删除某个已经安装的软件包" class="headerlink" title="删除某个已经安装的软件包"></a>删除某个已经安装的软件包</h2><p>以 git 为例，</p>
-<pre class="highlight"><span class="line">yum remove -y git*</span><br></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum remove -y git*</span><br></pre></td></tr></table></figure>
 
 <p><strong>注意：</strong> 使用通配符 * 删除前，最好先通过<code>yum list installed git*</code>查看一下已经安装的以<code>git</code>为前缀的软件包、确认是不是都是待删除的，避免误删。</p>
 <p><br/>— end —<br/></p>
 
-  </div>
-  <div>
-    
-      <div 
-        class="post-note note-warning copyright" 
-        style="margin-top: 42px">
-        <p>
-          <span style="font-weight: bold;">作者：</span><a 
-            target="_blank" 
-            rel="nofollow noopener noreferrer" 
-            href="/about">
-            置啬夫
-          </a>
-        </p>
-        <p>
-          <span style="font-weight: bold;">文章链接：</span><a 
-            target="_blank" 
-            rel="nofollow noopener noreferrer" 
-            href="https://zhisefu.com/2023/01/27/yum%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
-            https://zhisefu.com/2023/01/27/yum%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/
-          </a>
-        </p>
-        <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0 协议</a>。转载请注明出处！</p>
       </div>
-    
-  </div>
-</article>
-<div class="nav">
-  
-    <div class="nav-item-prev">
-      <a 
-        href="/2023/02/14/git%E6%95%99%E7%A8%8B%E4%B9%8B%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/" 
-        class="nav-link">
-        <i class="iconfont icon-left nav-prev-icon"></i>
-        <div>
-          <div class="nav-label">上一篇</div>
-          
-            <div class="nav-title">git教程之快速上手 </div>
-          
+        <div class="support-author">
+          <p>感谢您的阅读。 🙏
+          <a href="https://888.com/index.html" target="_blank">关于转载请看这里</a>
+            <!--<a class="btn-pay"  href="#pay-modal">¥ 打赏支持</a>-->
+          </p>
         </div>
-      </a>
-    </div>
-  
-  
-    <div class="nav-item-next">
-      <a 
-        href="/2023/01/27/%E9%80%9A%E8%BF%87yum%E5%AE%89%E8%A3%85%E9%AB%98%E7%89%88%E6%9C%ACgit/" 
-        class="nav-link">
-        <div>
-          <div class="nav-label">下一篇</div>
-          
-            <div class="nav-title">通过yum安装高版本git </div>
-          
-        </div>
-        <i class="iconfont icon-right nav-next-icon"></i>
-      </a>
-    </div>
-  
-</div>
-
-<div 
-  class="card card-content toc-card" 
-  id="mobiletoc">
-  <div class="toc-header">
-  <i 
-    class="iconfont icon-menu" 
-    style="padding-right: 2px;">
-  </i>目录
-</div>
-<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B"><span class="toc-number">1.</span> <span class="toc-text">查看</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%97%E5%87%BA%E6%89%80%E6%9C%89%E5%B7%B2%E7%BB%8F%E5%AE%89%E8%A3%85%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%8C%85"><span class="toc-number">1.1.</span> <span class="toc-text">列出所有已经安装的软件包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%97%E5%87%BA%E6%9F%90%E4%B8%AA%E5%B7%B2%E7%BB%8F%E5%AE%89%E8%A3%85%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%8C%85"><span class="toc-number">1.2.</span> <span class="toc-text">列出某个已经安装的软件包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%97%E5%87%BA%E6%9F%90%E4%B8%AA%E5%B7%B2%E7%BB%8F%E5%AE%89%E8%A3%85%E5%92%8C%E5%8F%AF%E4%BB%A5%E5%AE%89%E8%A3%85%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%8C%85"><span class="toc-number">1.3.</span> <span class="toc-text">列出某个已经安装和可以安装的软件包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%97%E5%87%BA%E6%89%80%E6%9C%89%E5%8F%AF%E6%9B%B4%E6%96%B0%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%8C%85"><span class="toc-number">1.4.</span> <span class="toc-text">列出所有可更新的软件包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%97%E5%87%BA%E5%8F%AF%E5%AE%89%E8%A3%85%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%8C%85"><span class="toc-number">1.5.</span> <span class="toc-text">列出可安装的软件包</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">2.</span> <span class="toc-text">安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%9F%90%E4%B8%AA%E8%BD%AF%E4%BB%B6%E5%8C%85%E5%92%8C%E7%9B%B8%E5%85%B3%E4%BE%9D%E8%B5%96%E5%8C%85"><span class="toc-number">2.1.</span> <span class="toc-text">安装某个软件包和相关依赖包</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%A0%E9%99%A4"><span class="toc-number">3.</span> <span class="toc-text">删除</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E6%9F%90%E4%B8%AA%E5%B7%B2%E7%BB%8F%E5%AE%89%E8%A3%85%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%8C%85"><span class="toc-number">3.1.</span> <span class="toc-text">删除某个已经安装的软件包</span></a></li></ol></li></ol>
-</div>
-            </main>
-            <aside class="right-column">
-              <div class="sticky-widescreen">
-  
-  
-    <article class="card card-content toc-card">
-      <div class="toc-header">
-  <i 
-    class="iconfont icon-menu" 
-    style="padding-right: 2px;">
-  </i>目录
-</div>
-<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B"><span class="toc-number">1.</span> <span class="toc-text">查看</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%97%E5%87%BA%E6%89%80%E6%9C%89%E5%B7%B2%E7%BB%8F%E5%AE%89%E8%A3%85%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%8C%85"><span class="toc-number">1.1.</span> <span class="toc-text">列出所有已经安装的软件包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%97%E5%87%BA%E6%9F%90%E4%B8%AA%E5%B7%B2%E7%BB%8F%E5%AE%89%E8%A3%85%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%8C%85"><span class="toc-number">1.2.</span> <span class="toc-text">列出某个已经安装的软件包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%97%E5%87%BA%E6%9F%90%E4%B8%AA%E5%B7%B2%E7%BB%8F%E5%AE%89%E8%A3%85%E5%92%8C%E5%8F%AF%E4%BB%A5%E5%AE%89%E8%A3%85%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%8C%85"><span class="toc-number">1.3.</span> <span class="toc-text">列出某个已经安装和可以安装的软件包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%97%E5%87%BA%E6%89%80%E6%9C%89%E5%8F%AF%E6%9B%B4%E6%96%B0%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%8C%85"><span class="toc-number">1.4.</span> <span class="toc-text">列出所有可更新的软件包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%97%E5%87%BA%E5%8F%AF%E5%AE%89%E8%A3%85%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%8C%85"><span class="toc-number">1.5.</span> <span class="toc-text">列出可安装的软件包</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">2.</span> <span class="toc-text">安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%9F%90%E4%B8%AA%E8%BD%AF%E4%BB%B6%E5%8C%85%E5%92%8C%E7%9B%B8%E5%85%B3%E4%BE%9D%E8%B5%96%E5%8C%85"><span class="toc-number">2.1.</span> <span class="toc-text">安装某个软件包和相关依赖包</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%A0%E9%99%A4"><span class="toc-number">3.</span> <span class="toc-text">删除</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E6%9F%90%E4%B8%AA%E5%B7%B2%E7%BB%8F%E5%AE%89%E8%A3%85%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%8C%85"><span class="toc-number">3.1.</span> <span class="toc-text">删除某个已经安装的软件包</span></a></li></ol></li></ol>
-    </article>
-  
-  
-  <article class="card card-content">
-    <div class="recent-posts-card">
-  <div class="recent-posts-header">
-    <i 
-      class="iconfont icon-wenzhang_huaban" 
-      style="padding-right: 2px;">
-    </i>最近文章
-  </div>
-  <div class="recent-posts-list">
-    
-      <div class="recent-posts-item">
-        <div class="recent-posts-item-title">2023-02-14</div>
-        <a href="/2023/02/14/git%E6%95%99%E7%A8%8B%E4%B9%8B%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/"><div class="recent-posts-item-content">git教程之快速上手</div></a>
-      </div>
-    
-      <div class="recent-posts-item">
-        <div class="recent-posts-item-title">2023-01-27</div>
-        <a href="/2023/01/27/yum%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"><div class="recent-posts-item-content">yum常用命令</div></a>
-      </div>
-    
-      <div class="recent-posts-item">
-        <div class="recent-posts-item-title">2023-01-27</div>
-        <a href="/2023/01/27/%E9%80%9A%E8%BF%87yum%E5%AE%89%E8%A3%85%E9%AB%98%E7%89%88%E6%9C%ACgit/"><div class="recent-posts-item-content">通过yum安装高版本git</div></a>
-      </div>
-    
-  </div>
-</div>
-  </article>
-  
-  
-</div>
-            </aside>
+        <!--
+            <div class="like ">
+              <div class="like-button">
+                <a id="like-note" href="">
+                  <i class="icon-heart"></i>喜欢
+                </a>
+              </div>
+              <span id="likes-count">256</span>
+            </div>
+        -->
+        <div class="otherLink">
+          <div class="previous">
+          </div>
+          <div class="next">
           </div>
         </div>
+        <div class="comments" id="comments">
+          
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+  const gitalk = new Gitalk({
+    clientID: '8888a8888',
+    clientSecret: '8888886666666',
+    repo: 'xxxx.github.io',
+    owner: 'admin',
+    admin: ['admin'],
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false
+  })
+
+  gitalk.render('comments');
+</script>
+
+
+        </div>
       </div>
     </div>
-     
-    <footer class="footer">
-  <div class="footer-container">
-    <div>
-      <div class="footer-dsc">
-        <span>
-          Copyright ©
-          
-            2020
-          
-          
-                - 
-                2023
-          
-        </span>
-        &nbsp;
-        <a 
-          href="/" 
-          class="footer-link">
-          山居杂记
-        </a>
-      </div>
-    </div>
+   </div>
+</main>
+<div class="footer">
+  <div class="info">
+    <p>
+    <a target="_blank" rel="noopener" href="https://hexo.io"> Hexo </a> 强力驱动 |
+      <a target="_blank" rel="noopener" href="https://github.com/Youthink/hexo-themes-yearn"> Yearn </a>
+      主题
+    </p>
+    <p>&copy;2013-2018 某某的博客 京ICP备xxxxxx号</p>
+  </div>
+</div>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-    
-      <div class="footer-dsc">
-        
-          Powered by
-          <a 
-            href="https://hexo.io/" 
-            class="footer-link" 
-            target="_blank" 
-            rel="nofollow noopener noreferrer">
-            &nbsp;Hexo
-          </a>
-        
-        
-          <span>&nbsp;|&nbsp;</span>
-        
-        
-          Theme -
-          <a 
-            href="https://github.com/theme-kaze" 
-            class="footer-link" 
-            target="_blank"
-            rel="nofollow noopener noreferrer">
-            &nbsp;Kaze
-          </a>
-        
-      </div>
-    
-    
-    
-    
-      <div class="footer-dsc">
-        
-          本站总访问量<span id="busuanzi_value_site_pv"></span>次
-        
-        
-          <span>&nbsp;|&nbsp;</span>
-        
-        
-          本站总访客数<span id="busuanzi_value_site_uv"></span>次
-        
-      </div>
-      
-    
-</footer>
- 
-    
-  <a 
-    role="button" 
-    id="scrollbutton" 
-    class="basebutton" 
-    aria-label="回到顶部">
-    <i class="iconfont icon-arrowleft button-icon"></i>
-  </a>
-
-<a 
-  role="button" 
-  id="menubutton"
-  aria-label="menu button"
-  class="basebutton">
-  <i class="iconfont icon-menu button-icon"></i>
-</a>
-<a 
-  role="button" 
-  id="popbutton" 
-  class="basebutton" 
-  aria-label="控制中心">
-  <i class="iconfont icon-expand button-icon"></i>
-</a>
-<a 
-  role="button" 
-  id="darkbutton" 
-  class="basebutton darkwidget" 
-  aria-label="夜色模式">
-  <i class="iconfont icon-weather button-icon"></i>
-</a>
-<a 
-  role="button" 
-  id="searchbutton" 
-  class="basebutton searchwidget" 
-  aria-label="搜索">
-  <i class="iconfont icon-search button-icon"></i>
-</a> 
-     
-     
-     
-      <script>
-  var addImgLayout = function () {
-    var img = document.querySelectorAll('.post-content img')
-    var i
-    for (i = 0; i < img.length; i++) {
-      var wrapper = document.createElement('a')
-      wrapper.setAttribute('href', img[i].getAttribute('data-src'))
-      wrapper.setAttribute('aria-label', 'illustration')
-      wrapper.style.cssText =
-        'width: 100%; display: flex; justify-content: center;'
-      if (img[i].alt) wrapper.dataset.caption = img[i].alt
-      wrapper.dataset.nolink = true
-      img[i].before(wrapper)
-      wrapper.append(img[i])
-      var divWrap = document.createElement('div')
-      divWrap.classList.add('gallery')
-      wrapper.before(divWrap)
-      divWrap.append(wrapper)
-    }
-    baguetteBox.run('.gallery')
+<script>//console
+  var consoleConfig = '\n欢迎访问 https://hufangyun.com ，围观小猿大圣的博客(づ｡◕‿‿◕｡)づ！\n,\n本博客使用 %cHexo%c 搭建，博客主题为小猿大圣开发的 %chexo-themes-yearn%c ~~~ 🎉🎉🎉 \n\n源码 https://github.com/Youthink/hexo-themes-yearn \n\n如果喜欢可以 star 支持一下 ❤️~\n,\n扫描下面的二维码，在手机上查看博客！\n,https://static.hufangyun.com/blog-url-qrcode-180-180.png,\n 想知道这个效果如何实现的？博客内搜索 console 彩蛋 🚀 ！\n'.split(',');
+  var canConsole = true;
+  var consoleInfo = (function(consoleConfig) {
+  if (!canConsole || !consoleConfig || consoleConfig.length < 1) {
+    return;
   }
-</script>
-<script>
-  loadScript(
-    "/js/lib/lightbox/baguetteBox.min.js",
-    addImgLayout
-  )
-</script>
- 
-     
-     
-    <script src="/js/main.js"></script> 
-    
-      <script> 
-        loadScript('/js/lib/busuanzi.min.js') 
-      </script>
-     
-    
-      <script>
-        var addLazyload = function () {
-          var observer = lozad('.lozad', {
-            load: function (el) {
-              el.srcset = el.getAttribute('data-src')
-            },
-            loaded: function (el) {
-              el.classList.add('loaded')
-            },
-          })
-          observer.observe()
+  var consoleColor = '#6190e8';
+  var _console;
+  var backgroundTextStyle = 'padding: 1px 5px;color: #fff;background: ' + consoleColor + ';'
+  var textStyle = 'color: ' + consoleColor + ';';
+
+  consoleConfig.map(o => {
+    var num = (o.match(/%c/g) || []).length;
+    if(/^http(s)?:\/\//.test(o)) {
+      console.log('%c     ', 'background: url(' + o + ') no-repeat left center;font-size: 180px;');
+      return;
+    }
+    if (num > 0) {
+      var logArguments = [];
+      for (var i = 0; i < num; i++) {
+        if (i % 2 === 0) {
+          logArguments.push(backgroundTextStyle);
+        } else {
+          logArguments.push(textStyle);
         }
-      </script>
-      <script>
-        loadScript('/js/lib/lozad.min.js', addLazyload)
-      </script>
-    
-    <script src="//instant.page/5.1.0" type="module"
-      integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
-    
-    
-      <script>
-        setTimeout(() => {localSearch("search.json")}, 0)
-      </script>
-    
-  </body>
+      }
+      (_console = console).log.apply(_console, ['%c' + o, textStyle].concat(logArguments));
+      return;
+    }
+    console.log('%c' + o, textStyle);
+  });
+}(consoleConfig));</script><script type="text/javascript" src="/./js/main.js"></script>
+
+  <script src="//at.alicdn.com/t/font_159214_mvtxvg9me9.js"></script>
+</body>
 </html>
