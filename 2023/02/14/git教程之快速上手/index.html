@@ -468,13 +468,13 @@
 <pre class="highlight"><span class="line">sudo apt install git-all</span><br></pre>
 
 <p>安装完毕后，可通过<code>git --version</code>查看 git 版本，</p>
-<p><img src="/images/git-version.png" alt="git-version" title="git version" srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/images/git-version.png" class="lozad post-image"></p>
+<p><img src="/2023/02/14/git%E6%95%99%E7%A8%8B%E4%B9%8B%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/images/git-version.png" alt="git-version" title="git version" srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/2023/02/14/git%E6%95%99%E7%A8%8B%E4%B9%8B%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/images/git-version.png" class="lozad post-image"></p>
 <p>其他操作系统安装 git 的命令可以参考官方文档：<a target="_blank" rel="noopener" href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">https://git-scm.com/book/en/v2/Getting-Started-Installing-Git</a></p>
 <h1 id="必要配置"><a href="#必要配置" class="headerlink" title="必要配置"></a>必要配置</h1><p>使用 git 前，必须设置<code>user.name</code>和<code>user.email</code>。<br>这两个属性用来标识用户身份，会出现在每一次的提交信息中。</p>
 <h2 id="设置配置"><a href="#设置配置" class="headerlink" title="设置配置"></a>设置配置</h2><p>设置<code>user.name</code>和<code>user.email</code>命令如下，</p>
 <pre class="highlight"><span class="line">git config --global user.name &quot;&lt;your-name&gt;&quot;</span><br><span class="line">git config --global user.email &quot;&lt;your-email&gt;&quot;</span><br></pre>
 
-<p><img src="/images/git-config-user.png" alt="git-config-user" title="set user" srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/images/git-config-user.png" class="lozad post-image"></p>
+<p><img src="/2023/02/14/git%E6%95%99%E7%A8%8B%E4%B9%8B%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/images/git-config-user.png" alt="git-config-user" title="set user" srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/2023/02/14/git%E6%95%99%E7%A8%8B%E4%B9%8B%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/images/git-config-user.png" class="lozad post-image"></p>
 <p>其中，<code>--global</code>表示属性的作用范围。<code>git config</code>中一共有三个作用范围，</p>
 <ol>
 <li><code>--local</code>，只对当前项目生效。</li>
@@ -502,7 +502,7 @@
 
 <h2 id="取消配置"><a href="#取消配置" class="headerlink" title="取消配置"></a>取消配置</h2><pre class="highlight"><span class="line">git config --global --unset &lt;property-name&gt;</span><br></pre>
 
-<p><img src="/images/git-config-unset.png" alt="git-config-unset" title="unset user.name" srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/images/git-config-unset.png" class="lozad post-image"></p>
+<p><img src="/2023/02/14/git%E6%95%99%E7%A8%8B%E4%B9%8B%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/images/git-config-unset.png" alt="git-config-unset" title="unset user.name" srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/2023/02/14/git%E6%95%99%E7%A8%8B%E4%B9%8B%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/images/git-config-unset.png" class="lozad post-image"></p>
 <p>此外，</p>
 <ol>
 <li><code>--global</code>还可以换成<code>--local</code>或者<code>--system</code>，表示撤销某个级别的属性设置。</li>
@@ -545,7 +545,7 @@
 
 <p>前者是将指定文件添加到暂存区（即，交给 git 管理）；后者是将所有新文件添加到暂存区。</p>
 <p>可以通过<code>git status</code>查看文件状态。</p>
-<p><img src="/images/git-add-new.png" alt="git-add-new" title="add new file" srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/images/git-add-new.png" class="lozad post-image"></p>
+<p><img src="/2023/02/14/git%E6%95%99%E7%A8%8B%E4%B9%8B%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/images/git-add-new.png" alt="git-add-new" title="add new file" srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/2023/02/14/git%E6%95%99%E7%A8%8B%E4%B9%8B%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/images/git-add-new.png" class="lozad post-image"></p>
 <h3 id="暂存区-–-gt-版本库"><a href="#暂存区-–-gt-版本库" class="headerlink" title="暂存区 –&gt; 版本库"></a>暂存区 –&gt; 版本库</h3><pre class="highlight"><span class="line">git commit &lt;file-name&gt;... -m &quot;some message for describing this commit&quot;</span><br></pre>
 
 <p>或</p>
@@ -553,7 +553,7 @@
 
 <p>前者是将指定文件从暂存区提交到版本库；后者是将暂存区所有文件提交到版本库。</p>
 <p>可以通过<code>git log --all --graph</code>查看所有历史提交。</p>
-<p><img src="/images/git-commit.png" alt="git-commit" title="commit files" srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/images/git-commit.png" class="lozad post-image"></p>
+<p><img src="/2023/02/14/git%E6%95%99%E7%A8%8B%E4%B9%8B%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/images/git-commit.png" alt="git-commit" title="commit files" srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/2023/02/14/git%E6%95%99%E7%A8%8B%E4%B9%8B%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/images/git-commit.png" class="lozad post-image"></p>
 <p>此后，被提交到版本库的文件就多了一个历史版本，之后可以随时回到任意一个历史版本。</p>
 <h3 id="版本库（最新版本）-–-gt-暂存区"><a href="#版本库（最新版本）-–-gt-暂存区" class="headerlink" title="版本库（最新版本） –&gt; 暂存区"></a>版本库（最新版本） –&gt; 暂存区</h3><pre class="highlight"><span class="line">git reset --mixed</span><br></pre>
 
@@ -621,7 +621,7 @@
 <h2 id="查看分支"><a href="#查看分支" class="headerlink" title="查看分支"></a>查看分支</h2><p>列出所有分支名称，</p>
 <pre class="highlight"><span class="line">git branch</span><br></pre>
 
-<p><img src="/images/git-branch.png" alt="git-branch" title="show all branches" srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/images/git-branch.png" class="lozad post-image"></p>
+<p><img src="/2023/02/14/git%E6%95%99%E7%A8%8B%E4%B9%8B%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/images/git-branch.png" alt="git-branch" title="show all branches" srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/2023/02/14/git%E6%95%99%E7%A8%8B%E4%B9%8B%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/images/git-branch.png" class="lozad post-image"></p>
 <p>其中，<code>*</code>表示当前分支。</p>
 <h2 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h2><ol>
 <li>创建新分支，但不切换到新分支，</li>
