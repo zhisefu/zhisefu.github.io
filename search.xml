@@ -2,18 +2,18 @@
 <search>
   <entry>
     <title>git教程之快速上手</title>
-    <url>/articles/4958/</url>
+    <url>/wiki/4958/</url>
     <content><![CDATA[<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>以 ubuntu-22.04 LTS 为例，安装命令如下，</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt install git-all</span><br></pre></td></tr></table></figure>
 
 <p>安装完毕后，可通过<code>git --version</code>查看 git 版本，</p>
-<p><img src="/articles/4958/images/git-version.png" alt="git-version" title="git version"></p>
+<p><img src="/wiki/4958/images/git-version.png" alt="git-version" title="git version"></p>
 <p>其他操作系统安装 git 的命令可以参考官方文档：<a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">https://git-scm.com/book/en/v2/Getting-Started-Installing-Git</a></p>
 <h1 id="必要配置"><a href="#必要配置" class="headerlink" title="必要配置"></a>必要配置</h1><p>使用 git 前，必须设置<code>user.name</code>和<code>user.email</code>。<br>这两个属性用来标识用户身份，会出现在每一次的提交信息中。</p>
 <h2 id="设置配置"><a href="#设置配置" class="headerlink" title="设置配置"></a>设置配置</h2><p>设置<code>user.name</code>和<code>user.email</code>命令如下，</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;&lt;your-name&gt;&quot;</span><br><span class="line">git config --global user.email &quot;&lt;your-email&gt;&quot;</span><br></pre></td></tr></table></figure>
 
-<p><img src="/articles/4958/images/git-config-user.png" alt="git-config-user" title="set user"></p>
+<p><img src="/wiki/4958/images/git-config-user.png" alt="git-config-user" title="set user"></p>
 <p>其中，<code>--global</code>表示属性的作用范围。<code>git config</code>中一共有三个作用范围，</p>
 <ol>
 <li><code>--local</code>，只对当前项目生效。</li>
@@ -41,7 +41,7 @@
 
 <h2 id="取消配置"><a href="#取消配置" class="headerlink" title="取消配置"></a>取消配置</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global --unset &lt;property-name&gt;</span><br></pre></td></tr></table></figure>
 
-<p><img src="/articles/4958/images/git-config-unset.png" alt="git-config-unset" title="unset user.name"></p>
+<p><img src="/wiki/4958/images/git-config-unset.png" alt="git-config-unset" title="unset user.name"></p>
 <p>此外，</p>
 <ol>
 <li><code>--global</code>还可以换成<code>--local</code>或者<code>--system</code>，表示撤销某个级别的属性设置。</li>
@@ -84,7 +84,7 @@
 
 <p>前者是将指定文件添加到暂存区（即，交给 git 管理）；后者是将所有新文件添加到暂存区。</p>
 <p>可以通过<code>git status</code>查看文件状态。</p>
-<p><img src="/articles/4958/images/git-add-new.png" alt="git-add-new" title="add new file"></p>
+<p><img src="/wiki/4958/images/git-add-new.png" alt="git-add-new" title="add new file"></p>
 <h3 id="暂存区-–-gt-版本库"><a href="#暂存区-–-gt-版本库" class="headerlink" title="暂存区 –&gt; 版本库"></a>暂存区 –&gt; 版本库</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git commit &lt;file-name&gt;... -m &quot;some message for describing this commit&quot;</span><br></pre></td></tr></table></figure>
 
 <p>或</p>
@@ -92,7 +92,7 @@
 
 <p>前者是将指定文件从暂存区提交到版本库；后者是将暂存区所有文件提交到版本库。</p>
 <p>可以通过<code>git log --all --graph</code>查看所有历史提交。</p>
-<p><img src="/articles/4958/images/git-commit.png" alt="git-commit" title="commit files"></p>
+<p><img src="/wiki/4958/images/git-commit.png" alt="git-commit" title="commit files"></p>
 <p>此后，被提交到版本库的文件就多了一个历史版本，之后可以随时回到任意一个历史版本。</p>
 <h3 id="版本库（最新版本）-–-gt-暂存区"><a href="#版本库（最新版本）-–-gt-暂存区" class="headerlink" title="版本库（最新版本） –&gt; 暂存区"></a>版本库（最新版本） –&gt; 暂存区</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git reset --mixed</span><br></pre></td></tr></table></figure>
 
@@ -160,7 +160,7 @@
 <h2 id="查看分支"><a href="#查看分支" class="headerlink" title="查看分支"></a>查看分支</h2><p>列出所有分支名称，</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure>
 
-<p><img src="/articles/4958/images/git-branch.png" alt="git-branch" title="show all branches"></p>
+<p><img src="/wiki/4958/images/git-branch.png" alt="git-branch" title="show all branches"></p>
 <p>其中，<code>*</code>表示当前分支。</p>
 <h2 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h2><ol>
 <li>创建新分支，但不切换到新分支，</li>
@@ -243,7 +243,7 @@
   </entry>
   <entry>
     <title>yum常用命令</title>
-    <url>/articles/36377/</url>
+    <url>/wiki/36377/</url>
     <content><![CDATA[<h1 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h1><h2 id="列出所有已经安装的软件包"><a href="#列出所有已经安装的软件包" class="headerlink" title="列出所有已经安装的软件包"></a>列出所有已经安装的软件包</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum list installed</span><br></pre></td></tr></table></figure>
 
 <h2 id="列出某个已经安装的软件包"><a href="#列出某个已经安装的软件包" class="headerlink" title="列出某个已经安装的软件包"></a>列出某个已经安装的软件包</h2><p>以 git 为例，</p>
@@ -277,7 +277,7 @@
   </entry>
   <entry>
     <title>通过yum安装高版本git</title>
-    <url>/articles/927/</url>
+    <url>/wiki/927/</url>
     <content><![CDATA[<h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>直接使用<code>yum install -y git</code>，安装的 git 版本会比较老。</p>
 <p>对此，官方文档说明如下，</p>
 <blockquote>

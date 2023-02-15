@@ -2,25 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://zhisefu.com/articles/4958/</loc>
-    
-    <lastmod>2023-02-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhisefu.com/articles/36377/</loc>
-    
-    <lastmod>2023-02-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhisefu.com/articles/927/</loc>
+    <loc>https://zhisefu.com/tags/index.html</loc>
     
     <lastmod>2023-02-15</lastmod>
     
@@ -38,7 +20,34 @@
   </url>
   
   <url>
-    <loc>https://zhisefu.com/tags/index.html</loc>
+    <loc>https://zhisefu.com/about/index.html</loc>
+    
+    <lastmod>2023-02-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhisefu.com/wiki/4958/</loc>
+    
+    <lastmod>2023-02-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhisefu.com/wiki/36377/</loc>
+    
+    <lastmod>2023-02-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhisefu.com/wiki/927/</loc>
     
     <lastmod>2023-02-15</lastmod>
     
