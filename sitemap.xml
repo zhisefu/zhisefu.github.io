@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://zhisefu.com/categories/index.html</loc>
+    
+    <lastmod>2023-02-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhisefu.com/tags/index.html</loc>
+    
+    <lastmod>2023-02-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhisefu.com/4958/</loc>
+    
+    <lastmod>2023-02-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhisefu.com/927/</loc>
+    
+    <lastmod>2023-02-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhisefu.com/36377/</loc>
+    
+    <lastmod>2023-02-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+
+  <url>
+    <loc>https://zhisefu.com/</loc>
+    <lastmod>2023-02-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  
+  <url>
+    <loc>https://zhisefu.com/tags/L1/</loc>
+    <lastmod>2023-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhisefu.com/tags/git/</loc>
+    <lastmod>2023-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhisefu.com/tags/yum/</loc>
+    <lastmod>2023-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+
+  
+  <url>
+    <loc>https://zhisefu.com/categories/%E5%9F%BA%E7%A1%80%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2023-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhisefu.com/categories/%E5%9F%BA%E7%A1%80%E5%B7%A5%E5%85%B7/git/</loc>
+    <lastmod>2023-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhisefu.com/categories/%E5%9F%BA%E7%A1%80%E5%B7%A5%E5%85%B7/yum/</loc>
+    <lastmod>2023-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+</urlset>
