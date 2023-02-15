@@ -1,6 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>yum常用命令</title>
+    <url>/articles/36377/</url>
+    <content><![CDATA[<h1 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h1><h2 id="列出所有已经安装的软件包"><a href="#列出所有已经安装的软件包" class="headerlink" title="列出所有已经安装的软件包"></a>列出所有已经安装的软件包</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum list installed</span><br></pre></td></tr></table></figure>
+
+<h2 id="列出某个已经安装的软件包"><a href="#列出某个已经安装的软件包" class="headerlink" title="列出某个已经安装的软件包"></a>列出某个已经安装的软件包</h2><p>以 git 为例，</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum list installed git*</span><br></pre></td></tr></table></figure>
+
+<h2 id="列出某个已经安装和可以安装的软件包"><a href="#列出某个已经安装和可以安装的软件包" class="headerlink" title="列出某个已经安装和可以安装的软件包"></a>列出某个已经安装和可以安装的软件包</h2><p>以 git 为例，</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum list git*</span><br></pre></td></tr></table></figure>
+
+<h2 id="列出所有可更新的软件包"><a href="#列出所有可更新的软件包" class="headerlink" title="列出所有可更新的软件包"></a>列出所有可更新的软件包</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum list updates</span><br></pre></td></tr></table></figure>
+
+<h2 id="列出可安装的软件包"><a href="#列出可安装的软件包" class="headerlink" title="列出可安装的软件包"></a>列出可安装的软件包</h2><p>以 git 为例，</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum search git</span><br></pre></td></tr></table></figure>
+
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h2 id="安装某个软件包和相关依赖包"><a href="#安装某个软件包和相关依赖包" class="headerlink" title="安装某个软件包和相关依赖包"></a>安装某个软件包和相关依赖包</h2><p>以 git 为例，</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum install -y git</span><br></pre></td></tr></table></figure>
+
+<h1 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h1><h2 id="删除某个已经安装的软件包"><a href="#删除某个已经安装的软件包" class="headerlink" title="删除某个已经安装的软件包"></a>删除某个已经安装的软件包</h2><p>以 git 为例，</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum remove -y git*</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：</strong> 使用通配符 * 删除前，最好先通过<code>yum list installed git*</code>查看一下已经安装的以<code>git</code>为前缀的软件包、确认是不是都是待删除的，避免误删。</p>
+<p><br/>— end —<br/></p>
+]]></content>
+      <categories>
+        <category>基础工具</category>
+        <category>yum</category>
+      </categories>
+      <tags>
+        <tag>L1</tag>
+        <tag>yum</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>git教程之快速上手</title>
     <url>/articles/4958/</url>
     <content><![CDATA[<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>以 ubuntu-22.04 LTS 为例，安装命令如下，</p>
@@ -239,40 +273,6 @@
       <tags>
         <tag>L1</tag>
         <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>yum常用命令</title>
-    <url>/articles/36377/</url>
-    <content><![CDATA[<h1 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h1><h2 id="列出所有已经安装的软件包"><a href="#列出所有已经安装的软件包" class="headerlink" title="列出所有已经安装的软件包"></a>列出所有已经安装的软件包</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum list installed</span><br></pre></td></tr></table></figure>
-
-<h2 id="列出某个已经安装的软件包"><a href="#列出某个已经安装的软件包" class="headerlink" title="列出某个已经安装的软件包"></a>列出某个已经安装的软件包</h2><p>以 git 为例，</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum list installed git*</span><br></pre></td></tr></table></figure>
-
-<h2 id="列出某个已经安装和可以安装的软件包"><a href="#列出某个已经安装和可以安装的软件包" class="headerlink" title="列出某个已经安装和可以安装的软件包"></a>列出某个已经安装和可以安装的软件包</h2><p>以 git 为例，</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum list git*</span><br></pre></td></tr></table></figure>
-
-<h2 id="列出所有可更新的软件包"><a href="#列出所有可更新的软件包" class="headerlink" title="列出所有可更新的软件包"></a>列出所有可更新的软件包</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum list updates</span><br></pre></td></tr></table></figure>
-
-<h2 id="列出可安装的软件包"><a href="#列出可安装的软件包" class="headerlink" title="列出可安装的软件包"></a>列出可安装的软件包</h2><p>以 git 为例，</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum search git</span><br></pre></td></tr></table></figure>
-
-<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h2 id="安装某个软件包和相关依赖包"><a href="#安装某个软件包和相关依赖包" class="headerlink" title="安装某个软件包和相关依赖包"></a>安装某个软件包和相关依赖包</h2><p>以 git 为例，</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum install -y git</span><br></pre></td></tr></table></figure>
-
-<h1 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h1><h2 id="删除某个已经安装的软件包"><a href="#删除某个已经安装的软件包" class="headerlink" title="删除某个已经安装的软件包"></a>删除某个已经安装的软件包</h2><p>以 git 为例，</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum remove -y git*</span><br></pre></td></tr></table></figure>
-
-<p><strong>注意：</strong> 使用通配符 * 删除前，最好先通过<code>yum list installed git*</code>查看一下已经安装的以<code>git</code>为前缀的软件包、确认是不是都是待删除的，避免误删。</p>
-<p><br/>— end —<br/></p>
-]]></content>
-      <categories>
-        <category>基础工具</category>
-        <category>yum</category>
-      </categories>
-      <tags>
-        <tag>L1</tag>
-        <tag>yum</tag>
       </tags>
   </entry>
   <entry>
