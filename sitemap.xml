@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://zhisefu.com/posts/4958/</loc>
+    
+    <lastmod>2023-02-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhisefu.com/posts/36377/</loc>
+    
+    <lastmod>2023-02-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhisefu.com/posts/927/</loc>
+    
+    <lastmod>2023-02-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://zhisefu.com/categories/index.html</loc>
     
     <lastmod>2023-02-15</lastmod>
@@ -14,33 +41,6 @@
     <loc>https://zhisefu.com/tags/index.html</loc>
     
     <lastmod>2023-02-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhisefu.com/4958/</loc>
-    
-    <lastmod>2023-02-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhisefu.com/927/</loc>
-    
-    <lastmod>2023-02-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhisefu.com/36377/</loc>
-    
-    <lastmod>2023-02-14</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
