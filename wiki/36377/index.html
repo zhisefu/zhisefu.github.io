@@ -6,20 +6,21 @@
     <title>yum常用命令 | 山居杂记</title>
     
     
-        <meta name="keywords" content="L1,yum" />
+        <meta name="keywords" content="L1,命令总结,yum" />
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="查看列出所有已经安装的软件包1yum list installed  列出某个已经安装的软件包以 git 为例， 1yum list installed git*  列出某个已经安装和可以安装的软件包以 git 为例， 1yum list git*  列出所有可更新的软件包1yum list updates  列出可安装的软件包以 git 为例， 1yum search git  安装安装某个软件">
+    <meta name="description" content="查看列出所有已安装的软件包1yum list installed  其中，installed表示仅列出已安装的软件包。 列出某个已经安装的软件包以 git 为例， 1yum list installed git*  其中，  installed限定范围为已安装的软件包； *是通配符，git*限定范围为所有名称以 git 为前缀的软件包。  列出某个已经安装和可以安装的软件包以 git 为例， 1y">
 <meta property="og:type" content="article">
 <meta property="og:title" content="yum常用命令">
 <meta property="og:url" content="https://zhisefu.com/wiki/36377/index.html">
 <meta property="og:site_name" content="山居杂记">
-<meta property="og:description" content="查看列出所有已经安装的软件包1yum list installed  列出某个已经安装的软件包以 git 为例， 1yum list installed git*  列出某个已经安装和可以安装的软件包以 git 为例， 1yum list git*  列出所有可更新的软件包1yum list updates  列出可安装的软件包以 git 为例， 1yum search git  安装安装某个软件">
+<meta property="og:description" content="查看列出所有已安装的软件包1yum list installed  其中，installed表示仅列出已安装的软件包。 列出某个已经安装的软件包以 git 为例， 1yum list installed git*  其中，  installed限定范围为已安装的软件包； *是通配符，git*限定范围为所有名称以 git 为前缀的软件包。  列出某个已经安装和可以安装的软件包以 git 为例， 1y">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-01-27T13:57:46.000Z">
-<meta property="article:modified_time" content="2023-02-15T04:07:49.645Z">
+<meta property="article:modified_time" content="2023-02-18T07:31:26.096Z">
 <meta property="article:author" content="置啬夫">
 <meta property="article:tag" content="L1">
+<meta property="article:tag" content="命令总结">
 <meta property="article:tag" content="yum">
 <meta name="twitter:card" content="summary">
     
@@ -191,7 +192,7 @@
                 <span>文章</span>
             </div>
             <div class="article-info-block">
-                3
+                6
                 <span>标签</span>
             </div>
         </div>
@@ -362,7 +363,7 @@
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link-link" href="/tags/L1/" rel="tag">L1</a>, <a class="tag-link-link" href="/tags/yum/" rel="tag">yum</a>
+        <a class="tag-link-link" href="/tags/L1/" rel="tag">L1</a>, <a class="tag-link-link" href="/tags/yum/" rel="tag">yum</a>, <a class="tag-link-link" href="/tags/%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/" rel="tag">命令总结</a>
     </div>
 
                         
@@ -397,27 +398,49 @@
             
         
         
-            <h1 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h1><h2 id="列出所有已经安装的软件包"><a href="#列出所有已经安装的软件包" class="headerlink" title="列出所有已经安装的软件包"></a>列出所有已经安装的软件包</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum list installed</span><br></pre></td></tr></table></figure>
+            <h1 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h1><h2 id="列出所有已安装的软件包"><a href="#列出所有已安装的软件包" class="headerlink" title="列出所有已安装的软件包"></a>列出所有已安装的软件包</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum list installed</span><br></pre></td></tr></table></figure>
 
+<p>其中，<code>installed</code>表示仅列出<strong>已安装</strong>的软件包。</p>
 <h2 id="列出某个已经安装的软件包"><a href="#列出某个已经安装的软件包" class="headerlink" title="列出某个已经安装的软件包"></a>列出某个已经安装的软件包</h2><p>以 git 为例，</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum list installed git*</span><br></pre></td></tr></table></figure>
 
+<p>其中，</p>
+<ol>
+<li><code>installed</code>限定范围为<strong>已安装</strong>的软件包；</li>
+<li><code>*</code>是通配符，<code>git*</code>限定范围为所有名称以 git 为前缀的软件包。</li>
+</ol>
 <h2 id="列出某个已经安装和可以安装的软件包"><a href="#列出某个已经安装和可以安装的软件包" class="headerlink" title="列出某个已经安装和可以安装的软件包"></a>列出某个已经安装和可以安装的软件包</h2><p>以 git 为例，</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum list git*</span><br></pre></td></tr></table></figure>
 
+<ol>
+<li>这里没有<code>installed</code>做限定，因此，会列出所有<strong>已安装</strong>和<strong>未安装</strong>的软件包。</li>
+<li>如上所述，<code>*</code>是通配符，<code>git*</code>限定范围为所有名称以 git 为前缀的软件包。</li>
+</ol>
 <h2 id="列出所有可更新的软件包"><a href="#列出所有可更新的软件包" class="headerlink" title="列出所有可更新的软件包"></a>列出所有可更新的软件包</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum list updates</span><br></pre></td></tr></table></figure>
 
-<h2 id="列出可安装的软件包"><a href="#列出可安装的软件包" class="headerlink" title="列出可安装的软件包"></a>列出可安装的软件包</h2><p>以 git 为例，</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum search git</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 列出可安装的软件包</span><br><span class="line"></span><br><span class="line">以 git 为例，</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>yum search git</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">```search```表示在 yum 源中查找**名称**或**描述**中包含```git```这个字符串的软件包。</span><br><span class="line"></span><br><span class="line"># 安装</span><br><span class="line"></span><br><span class="line">## 安装某个软件包和相关依赖包</span><br><span class="line"></span><br><span class="line">以 git 为例，</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>yum install -y git</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">如果不加```-y```，会有提示，需要交互式确认，</span><br><span class="line"></span><br><span class="line">![yum-install-y-no](images/yum-install-y-no.png &quot;yum install git&quot;)</span><br><span class="line"></span><br><span class="line">其中，**y** 表示 yes，**d** 表示 download only，**N** 表示 No。</span><br><span class="line"></span><br><span class="line">```-y```的作用就是取消交互式提示、都按输入 **y** 处理。</span><br><span class="line"></span><br><span class="line"># 删除</span><br><span class="line"></span><br><span class="line">## 删除某个已经安装的软件包</span><br><span class="line"></span><br><span class="line">以 git 为例，</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>yum remove -y git*</p>
+<pre><code>
+1. 如果不加```-y```，会有提示，需要交互式确认，
 
-<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h2 id="安装某个软件包和相关依赖包"><a href="#安装某个软件包和相关依赖包" class="headerlink" title="安装某个软件包和相关依赖包"></a>安装某个软件包和相关依赖包</h2><p>以 git 为例，</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y git</span><br></pre></td></tr></table></figure>
+![yum-remove-y-no](images/yum-remove-y-no.png &quot;yum remove git*&quot;)
 
-<h1 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h1><h2 id="删除某个已经安装的软件包"><a href="#删除某个已经安装的软件包" class="headerlink" title="删除某个已经安装的软件包"></a>删除某个已经安装的软件包</h2><p>以 git 为例，</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum remove -y git*</span><br></pre></td></tr></table></figure>
+其中，**y** 表示 yes，**N** 表示 No。
 
-<p><strong>注意：</strong> 使用通配符 * 删除前，最好先通过<code>yum list installed git*</code>查看一下已经安装的以<code>git</code>为前缀的软件包、确认是不是都是待删除的，避免误删。</p>
-<p><br/>— end —<br/></p>
+```-y```的作用就是取消交互式提示、都按输入 **y** 处理。
+
+2. 删除软件包时，会自动将有依赖关系的软件包一并删除。
+
+3. ```git*```表示删除所有名称以 git 为前缀的软件包。
+
+**注意：** 使用通配符 * 删除前，最好先通过```yum list installed git*```查看一下已经安装的以```git```为前缀的软件包、确认是不是都是待删除的，避免误删。
+
+&lt;br/&gt;--- end ---&lt;br/&gt;
+</code></pre>
 
             </div>
         
