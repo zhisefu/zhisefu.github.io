@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://zhisefu.com/wiki/36377/</loc>
+    
+    <lastmod>2023-02-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://zhisefu.com/wiki/4958/</loc>
     
     <lastmod>2023-02-18</lastmod>
@@ -12,15 +21,6 @@
   
   <url>
     <loc>https://zhisefu.com/wiki/927/</loc>
-    
-    <lastmod>2023-02-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhisefu.com/wiki/36377/</loc>
     
     <lastmod>2023-02-18</lastmod>
     
@@ -72,6 +72,20 @@
   </url>
   
   <url>
+    <loc>https://zhisefu.com/tags/%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2023-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhisefu.com/tags/git/</loc>
+    <lastmod>2023-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://zhisefu.com/tags/%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/</loc>
     <lastmod>2023-02-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -92,20 +106,6 @@
     <priority>0.2</priority>
   </url>
   
-  <url>
-    <loc>https://zhisefu.com/tags/git/</loc>
-    <lastmod>2023-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhisefu.com/tags/%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2023-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
 
   
   <url>
@@ -116,14 +116,14 @@
   </url>
   
   <url>
-    <loc>https://zhisefu.com/categories/%E5%9F%BA%E7%A1%80%E5%B7%A5%E5%85%B7/yum/</loc>
+    <loc>https://zhisefu.com/categories/%E5%9F%BA%E7%A1%80%E5%B7%A5%E5%85%B7/git/</loc>
     <lastmod>2023-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://zhisefu.com/categories/%E5%9F%BA%E7%A1%80%E5%B7%A5%E5%85%B7/git/</loc>
+    <loc>https://zhisefu.com/categories/%E5%9F%BA%E7%A1%80%E5%B7%A5%E5%85%B7/yum/</loc>
     <lastmod>2023-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
