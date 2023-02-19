@@ -6,7 +6,7 @@
   <link href="https://zhisefu.com/atom.xml" rel="self"/>
   
   <link href="https://zhisefu.com/"/>
-  <updated>2023-02-18T08:37:57.255Z</updated>
+  <updated>2023-02-19T09:57:02.789Z</updated>
   <id>https://zhisefu.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>《考古学初阶》图书信息</title>
+    <link href="https://zhisefu.com/wiki/20323/"/>
+    <id>https://zhisefu.com/wiki/20323/</id>
+    <published>2023-02-19T09:53:31.000Z</published>
+    <updated>2023-02-19T09:57:02.789Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>名称：</strong> 考古学初阶<br><strong>作者：</strong> 严文明<br><strong>ISBN：</strong> 978-7-5010-5859-4<br><strong>出版发行：</strong> 文物出版社<br><strong>版次：</strong> 2018年12月第1版<br><strong>印次：</strong> 2021年1月第3次印刷</p><p><br/>–end–<br/></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;名称：&lt;/strong&gt; 考古学初阶&lt;br&gt;&lt;strong&gt;作者：&lt;/strong&gt; 严文明&lt;br&gt;&lt;strong&gt;ISBN：&lt;/strong&gt; 978-7-5010-5859-4&lt;br&gt;&lt;strong&gt;出版发行：&lt;/strong&gt; 文物出版社&lt;br&gt;&lt;st</summary>
+      
+    
+    
+    
+    <category term="考古" scheme="https://zhisefu.com/categories/%E8%80%83%E5%8F%A4/"/>
+    
+    <category term="《考古学初阶》" scheme="https://zhisefu.com/categories/%E8%80%83%E5%8F%A4/%E3%80%8A%E8%80%83%E5%8F%A4%E5%AD%A6%E5%88%9D%E9%98%B6%E3%80%8B/"/>
+    
+    
+    <category term="L1" scheme="https://zhisefu.com/tags/L1/"/>
+    
+    <category term="笔记" scheme="https://zhisefu.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="考古" scheme="https://zhisefu.com/tags/%E8%80%83%E5%8F%A4/"/>
+    
+  </entry>
   
   <entry>
     <title>git教程之快速上手</title>
