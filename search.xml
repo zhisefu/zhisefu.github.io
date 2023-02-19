@@ -244,7 +244,7 @@
       </categories>
       <tags>
         <tag>L1</tag>
-        <tag>系列教程</tag>
+        <tag>教程</tag>
         <tag>git</tag>
       </tags>
   </entry>
@@ -307,7 +307,7 @@
       </categories>
       <tags>
         <tag>L1</tag>
-        <tag>命令总结</tag>
+        <tag>总结</tag>
         <tag>yum</tag>
       </tags>
   </entry>
@@ -356,7 +356,7 @@
         <tag>L1</tag>
         <tag>git</tag>
         <tag>yum</tag>
-        <tag>问题解决</tag>
+        <tag>问题</tag>
       </tags>
   </entry>
 </search>
