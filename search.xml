@@ -312,22 +312,6 @@
       </tags>
   </entry>
   <entry>
-    <title>《考古学初阶》图书信息</title>
-    <url>/wiki/20323/</url>
-    <content><![CDATA[<p><strong>名称：</strong> 考古学初阶<br><strong>作者：</strong> 严文明<br><strong>ISBN：</strong> 978-7-5010-5859-4<br><strong>出版发行：</strong> 文物出版社<br><strong>版次：</strong> 2018年12月第1版<br><strong>印次：</strong> 2021年1月第3次印刷</p>
-<p><br/>–end–<br/></p>
-]]></content>
-      <categories>
-        <category>考古</category>
-        <category>《考古学初阶》</category>
-      </categories>
-      <tags>
-        <tag>L1</tag>
-        <tag>拆书</tag>
-        <tag>考古</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>通过yum安装高版本git</title>
     <url>/wiki/927/</url>
     <content><![CDATA[<h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>直接使用<code>yum install -y git</code>，安装的 git 版本会比较老。</p>
