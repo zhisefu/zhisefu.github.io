@@ -1,54 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>通过yum安装高版本git</title>
-    <url>/wiki/927/</url>
-    <content><![CDATA[<h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>直接使用<code>yum install -y git</code>，安装的 git 版本会比较老。</p>
-<p>对此，官方文档说明如下，</p>
-<blockquote>
-<p>Red Hat Enterprise Linux, Oracle Linux, CentOS, Scientific Linux, et al.<br>RHEL and derivatives typically ship older versions of git. You can download a tarball and build from source, or use a 3rd-party repository such as the IUS Community Project to obtain a more recent version of git.</p>
-</blockquote>
-<p>参考，<br><a href="https://git-scm.com/download/linux">https://git-scm.com/download/linux</a></p>
-<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>根据上述官方文档的描述，解决办法有如下两种：</p>
-<ol>
-<li>通过源码构建。</li>
-<li>使用第三方安装源。</li>
-</ol>
-<p>这里以使用第三方源 <a href="https://ius.io/">IUS Community Project</a> 为例，安装高版本 git 步骤如下，</p>
-<ol>
-<li>检查 git 是否已经安装</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum list installed git*</span><br></pre></td></tr></table></figure>
-
-<p>如果 git 已经安装，先删除，</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum remove -y git*</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>更新 yum 源</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum install -y \ </span><br><span class="line">https://repo.ius.io/ius-release-el7.rpm \ </span><br><span class="line">https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm</span><br></pre></td></tr></table></figure>
-
-<p>参考，<br><a href="https://ius.io/setup">https://ius.io/setup</a></p>
-<ol start="3">
-<li>安装 git</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum install -y git236</span><br></pre></td></tr></table></figure>
-
-<p>其中，<code>git236</code>是 <a href="https://ius.io/">IUS Community Project</a> 中的项目；更多 IUS 项目可以在 <a href="https://github.com/search?q=org:iusrepo+topic:rpm&type=repositories">https://github.com/search?q=org%3Aiusrepo+topic%3Arpm&amp;type=repositories</a> 中查找。</p>
-<p><br/>—end—<br/></p>
-]]></content>
-      <categories>
-        <category>基础工具</category>
-        <category>git</category>
-      </categories>
-      <tags>
-        <tag>L1</tag>
-        <tag>问题</tag>
-        <tag>git</tag>
-        <tag>yum</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>git教程之快速上手</title>
     <url>/wiki/4958/</url>
     <content><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>引用官方介绍，如下，</p>
@@ -120,7 +72,7 @@
 </ol>
 <p>项目目录下，<code>.git</code>之外的目录即为工作目录。</p>
 <p>之所以称之为“工作目录”，是因为用户可以在这里新建、修改、删除文件或目录，之后通过命令将变化提交给 git。</p>
-<p>工作目录中的文件有如下状态，<br>    - <strong>untracked</strong>：新创建的文件会是 untracked 状态；此时，需要通过命令将新文件提交给 git 管理。<br>    - <strong>modified</strong>：被 git 管理的文件，在工作目录中内容被修改了，就会处于 modified 状态；此时，需要通过命令将变化更新给 git。<br>    - <strong>deleted</strong>：被 git 管理的文件，在工作目录中被删除了，就会处于 deleted 状态；此时，需要通过命令将删除更新给 git。</p>
+<p>工作目录中的文件有如下状态，<br>    1. <strong>untracked</strong>：新创建的文件会是 untracked 状态；此时，需要通过命令将新文件提交给 git 管理。<br>    2. <strong>modified</strong>：被 git 管理的文件，在工作目录中内容被修改了，就会处于 modified 状态；此时，需要通过命令将变化更新给 git。<br>    3. <strong>deleted</strong>：被 git 管理的文件，在工作目录中被删除了，就会处于 deleted 状态；此时，需要通过命令将删除更新给 git。</p>
 <ol start="2">
 <li><strong>暂存区</strong></li>
 </ol>
@@ -200,19 +152,19 @@
 <ol>
 <li>一个分支是一个版本</li>
 </ol>
-<p>例如，应用程序 v1.0 和 v2.0 都在持续更新版本，那么，<br>    - v1.0 和 v2.0 可以分别作为两个分支。</p>
+<p>例如，应用程序 v1.0 和 v2.0 都在持续更新版本，那么，v1.0 和 v2.0 可以分别作为两个分支。</p>
 <ol start="2">
 <li>一个分支是一个开发阶段</li>
 </ol>
-<p>例如，对于同一个版本的应用程序，可能分为测试版和稳定版，那么，<br>    - 测试版和稳定版可以分别作为两个分支，<br>    - 测试版经过一系列迭代之后并入稳定版。</p>
+<p>例如，对于同一个版本的应用程序，可能分为测试版和稳定版，那么，<br>    1. 测试版和稳定版可以分别作为两个分支，<br>    2. 测试版经过一系列迭代之后并入稳定版。</p>
 <ol start="3">
 <li>一个分支是一个特性开发</li>
 </ol>
-<p>例如，应用程序在主线开发之外需要引入一个新的特性、或者修复一个紧急 bug，此时，<br>    - 在主线之外创建一个分支，<br>    - 在特性开发完成、或者 bug 修复之后，将该分支并入主线。</p>
+<p>例如，应用程序在主线开发之外需要引入一个新的特性、或者修复一个紧急 bug，此时，<br>    1. 在主线之外创建一个分支，<br>    2. 在特性开发完成、或者 bug 修复之后，将该分支并入主线。</p>
 <ol start="4">
 <li>一个分支是一个开发模块</li>
 </ol>
-<p>例如，应用程序分为前端开发和后端开发，那么，<br>    - 前端开发和后端开发可以分别作为两个并行推进，<br>    - 当前端开发和后端开发都完成后，将两个分支合并到一起。</p>
+<p>例如，应用程序分为前端开发和后端开发，那么，<br>    1. 前端开发和后端开发可以分别作为两个并行推进，<br>    2. 当前端开发和后端开发都完成后，将两个分支合并到一起。</p>
 <h2 id="查看分支"><a href="#查看分支" class="headerlink" title="查看分支"></a>查看分支</h2><p>列出所有分支名称，</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure>
 
@@ -234,12 +186,9 @@
 
 <p><strong>注意，</strong></p>
 <ol>
-<li><p>使用<code>-d</code>时，要删除的分支必须已经并入了当前分支，否则删除失败。</p>
-</li>
-<li><p>如果确定不再需要待删除的分支、并且不想将其并入当前分支，可以使用<code>git branch -D &lt;branch-name&gt;</code>。</p>
-</li>
-<li><p>待删除的分支不能是当前分支，需要离开这个分支、然后才能删除它。</p>
-</li>
+<li>使用<code>-d</code>时，要删除的分支必须已经并入了当前分支，否则删除失败。</li>
+<li>如果确定不再需要待删除的分支、并且不想将其并入当前分支，可以使用<code>git branch -D &lt;branch-name&gt;</code>。</li>
+<li>待删除的分支不能是当前分支，需要离开这个分支、然后才能删除它。</li>
 </ol>
 <h2 id="切换分支"><a href="#切换分支" class="headerlink" title="切换分支"></a>切换分支</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git checkout &lt;branch-name&gt;</span><br></pre></td></tr></table></figure>
 
@@ -294,8 +243,8 @@
       </categories>
       <tags>
         <tag>L1</tag>
-        <tag>git</tag>
         <tag>教程</tag>
+        <tag>git</tag>
       </tags>
   </entry>
   <entry>
@@ -357,8 +306,56 @@
       </categories>
       <tags>
         <tag>L1</tag>
-        <tag>yum</tag>
         <tag>总结</tag>
+        <tag>yum</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>通过yum安装高版本git</title>
+    <url>/wiki/927/</url>
+    <content><![CDATA[<h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>直接使用<code>yum install -y git</code>，安装的 git 版本会比较老。</p>
+<p>对此，官方文档说明如下，</p>
+<blockquote>
+<p>Red Hat Enterprise Linux, Oracle Linux, CentOS, Scientific Linux, et al.<br>RHEL and derivatives typically ship older versions of git. You can download a tarball and build from source, or use a 3rd-party repository such as the IUS Community Project to obtain a more recent version of git.</p>
+</blockquote>
+<p>参考，<br><a href="https://git-scm.com/download/linux">https://git-scm.com/download/linux</a></p>
+<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>根据上述官方文档的描述，解决办法有如下两种：</p>
+<ol>
+<li>通过源码构建。</li>
+<li>使用第三方安装源。</li>
+</ol>
+<p>这里以使用第三方源 <a href="https://ius.io/">IUS Community Project</a> 为例，安装高版本 git 步骤如下，</p>
+<ol>
+<li>检查 git 是否已经安装</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum list installed git*</span><br></pre></td></tr></table></figure>
+
+<p>如果 git 已经安装，先删除，</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum remove -y git*</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>更新 yum 源</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum install -y \ </span><br><span class="line">https://repo.ius.io/ius-release-el7.rpm \ </span><br><span class="line">https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm</span><br></pre></td></tr></table></figure>
+
+<p>参考，<br><a href="https://ius.io/setup">https://ius.io/setup</a></p>
+<ol start="3">
+<li>安装 git</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum install -y git236</span><br></pre></td></tr></table></figure>
+
+<p>其中，<code>git236</code>是 <a href="https://ius.io/">IUS Community Project</a> 中的项目；更多 IUS 项目可以在 <a href="https://github.com/search?q=org:iusrepo+topic:rpm&type=repositories">https://github.com/search?q=org%3Aiusrepo+topic%3Arpm&amp;type=repositories</a> 中查找。</p>
+<p><br/>—end—<br/></p>
+]]></content>
+      <categories>
+        <category>基础工具</category>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>L1</tag>
+        <tag>git</tag>
+        <tag>yum</tag>
+        <tag>问题</tag>
       </tags>
   </entry>
 </search>
