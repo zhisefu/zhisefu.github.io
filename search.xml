@@ -248,6 +248,54 @@
       </tags>
   </entry>
   <entry>
+    <title>通过yum安装高版本git</title>
+    <url>/wiki/927/</url>
+    <content><![CDATA[<h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>直接使用<code>yum install -y git</code>，安装的 git 版本会比较老。</p>
+<p>对此，官方文档说明如下，</p>
+<blockquote>
+<p>Red Hat Enterprise Linux, Oracle Linux, CentOS, Scientific Linux, et al.<br>RHEL and derivatives typically ship older versions of git. You can download a tarball and build from source, or use a 3rd-party repository such as the IUS Community Project to obtain a more recent version of git.</p>
+</blockquote>
+<p>参考，<br><a href="https://git-scm.com/download/linux">https://git-scm.com/download/linux</a></p>
+<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>根据上述官方文档的描述，解决办法有如下两种：</p>
+<ol>
+<li>通过源码构建。</li>
+<li>使用第三方安装源。</li>
+</ol>
+<p>这里以使用第三方源 <a href="https://ius.io/">IUS Community Project</a> 为例，安装高版本 git 步骤如下，</p>
+<ol>
+<li>检查 git 是否已经安装</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum list installed git*</span><br></pre></td></tr></table></figure>
+
+<p>如果 git 已经安装，先删除，</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum remove -y git*</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>更新 yum 源</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum install -y \ </span><br><span class="line">https://repo.ius.io/ius-release-el7.rpm \ </span><br><span class="line">https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm</span><br></pre></td></tr></table></figure>
+
+<p>参考，<br><a href="https://ius.io/setup">https://ius.io/setup</a></p>
+<ol start="3">
+<li>安装 git</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum install -y git236</span><br></pre></td></tr></table></figure>
+
+<p>其中，<code>git236</code>是 <a href="https://ius.io/">IUS Community Project</a> 中的项目；更多 IUS 项目可以在 <a href="https://github.com/search?q=org:iusrepo+topic:rpm&type=repositories">https://github.com/search?q=org%3Aiusrepo+topic%3Arpm&amp;type=repositories</a> 中查找。</p>
+<p><br/>—end—<br/></p>
+]]></content>
+      <categories>
+        <category>基础工具</category>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>L1</tag>
+        <tag>git</tag>
+        <tag>问题</tag>
+        <tag>yum</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>yum常用命令</title>
     <url>/wiki/36377/</url>
     <content><![CDATA[<h1 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h1><h2 id="列出所有已安装的软件包"><a href="#列出所有已安装的软件包" class="headerlink" title="列出所有已安装的软件包"></a>列出所有已安装的软件包</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum list installed</span><br></pre></td></tr></table></figure>
@@ -306,56 +354,8 @@
       </categories>
       <tags>
         <tag>L1</tag>
+        <tag>yum</tag>
         <tag>总结</tag>
-        <tag>yum</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>通过yum安装高版本git</title>
-    <url>/wiki/927/</url>
-    <content><![CDATA[<h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>直接使用<code>yum install -y git</code>，安装的 git 版本会比较老。</p>
-<p>对此，官方文档说明如下，</p>
-<blockquote>
-<p>Red Hat Enterprise Linux, Oracle Linux, CentOS, Scientific Linux, et al.<br>RHEL and derivatives typically ship older versions of git. You can download a tarball and build from source, or use a 3rd-party repository such as the IUS Community Project to obtain a more recent version of git.</p>
-</blockquote>
-<p>参考，<br><a href="https://git-scm.com/download/linux">https://git-scm.com/download/linux</a></p>
-<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>根据上述官方文档的描述，解决办法有如下两种：</p>
-<ol>
-<li>通过源码构建。</li>
-<li>使用第三方安装源。</li>
-</ol>
-<p>这里以使用第三方源 <a href="https://ius.io/">IUS Community Project</a> 为例，安装高版本 git 步骤如下，</p>
-<ol>
-<li>检查 git 是否已经安装</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum list installed git*</span><br></pre></td></tr></table></figure>
-
-<p>如果 git 已经安装，先删除，</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum remove -y git*</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>更新 yum 源</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum install -y \ </span><br><span class="line">https://repo.ius.io/ius-release-el7.rpm \ </span><br><span class="line">https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm</span><br></pre></td></tr></table></figure>
-
-<p>参考，<br><a href="https://ius.io/setup">https://ius.io/setup</a></p>
-<ol start="3">
-<li>安装 git</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum install -y git236</span><br></pre></td></tr></table></figure>
-
-<p>其中，<code>git236</code>是 <a href="https://ius.io/">IUS Community Project</a> 中的项目；更多 IUS 项目可以在 <a href="https://github.com/search?q=org:iusrepo+topic:rpm&type=repositories">https://github.com/search?q=org%3Aiusrepo+topic%3Arpm&amp;type=repositories</a> 中查找。</p>
-<p><br/>—end—<br/></p>
-]]></content>
-      <categories>
-        <category>基础工具</category>
-        <category>git</category>
-      </categories>
-      <tags>
-        <tag>L1</tag>
-        <tag>git</tag>
-        <tag>yum</tag>
-        <tag>问题</tag>
       </tags>
   </entry>
 </search>
