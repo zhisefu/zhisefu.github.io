@@ -314,6 +314,17 @@
       </tags>
   </entry>
   <entry>
+    <title>《git教程》</title>
+    <url>/wiki/28300/</url>
+    <content><![CDATA[<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><blockquote>
+<ul>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+</ul>
+</blockquote>
+]]></content>
+  </entry>
+  <entry>
     <title>通过yum安装高版本git</title>
     <url>/wiki/927/</url>
     <content><![CDATA[<h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>直接使用<code>yum install -y git</code>，安装的 git 版本会比较老。</p>
