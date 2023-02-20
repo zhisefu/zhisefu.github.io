@@ -324,7 +324,7 @@
 <p>参考，<br><a href="https://git-scm.com/download/linux">https://git-scm.com/download/linux</a></p>
 <h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>根据上述官方文档的描述，解决办法有如下两种，</p>
 <ol>
-<li>通过源码构建。</li>
+<li>通过源码构建；</li>
 <li>使用第三方安装源。</li>
 </ol>
 <p>这里以使用第三方源 <a href="https://ius.io/">IUS Community Project</a> 为例，安装高版本 git 步骤如下，</p>
