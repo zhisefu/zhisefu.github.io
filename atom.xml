@@ -6,7 +6,7 @@
   <link href="https://zhisefu.com/atom.xml" rel="self"/>
   
   <link href="https://zhisefu.com/"/>
-  <updated>2023-02-21T09:04:04.928Z</updated>
+  <updated>2023-02-21T09:10:04.012Z</updated>
   <id>https://zhisefu.com/</id>
   
   <author>
@@ -18,34 +18,10 @@
   
   <entry>
     <title></title>
-    <link href="https://zhisefu.com/wiki/0/"/>
-    <id>https://zhisefu.com/wiki/0/</id>
-    <published>2023-02-21T08:59:21.438Z</published>
-    <updated>2023-02-21T09:04:04.928Z</updated>
-    
-    <content type="html"><![CDATA[<p>This is blog1.</p><p><a href="images/blog1.jpg" title="blog1">blog1</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;This is blog1.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;images/blog1.jpg&quot; title=&quot;blog1&quot;&gt;blog1&lt;/a&gt;&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="org" scheme="https://zhisefu.com/categories/org/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
     <link href="https://zhisefu.com/wiki/1/"/>
     <id>https://zhisefu.com/wiki/1/</id>
     <published>2023-02-21T08:59:21.438Z</published>
-    <updated>2023-02-21T09:03:59.982Z</updated>
+    <updated>2023-02-21T09:10:04.012Z</updated>
     
     <content type="html"><![CDATA[<p>This is blog2.</p><p><a href="images/blog2.jpg" title="blog2">blog2</a></p>]]></content>
     
@@ -153,6 +129,30 @@
     <category term="笔记" scheme="https://zhisefu.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
     <category term="考古" scheme="https://zhisefu.com/tags/%E8%80%83%E5%8F%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>myblog1</title>
+    <link href="https://zhisefu.com/wiki/3720/"/>
+    <id>https://zhisefu.com/wiki/3720/</id>
+    <published>2023-02-20T11:58:21.000Z</published>
+    <updated>2023-02-21T09:11:55.654Z</updated>
+    
+    <content type="html"><![CDATA[<p>This is blog1.</p><p><a href="images/blog1.jpg" title="blog1">blog1</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;This is blog1.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;images/blog1.jpg&quot; title=&quot;blog1&quot;&gt;blog1&lt;/a&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="org" scheme="https://zhisefu.com/categories/org/"/>
+    
     
   </entry>
   

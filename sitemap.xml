@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://zhisefu.com/wiki/0/</loc>
+    <loc>https://zhisefu.com/wiki/3720/</loc>
     
     <lastmod>2023-02-21</lastmod>
     
@@ -196,14 +196,14 @@
   </url>
   
   <url>
-    <loc>https://zhisefu.com/categories/%E8%80%83%E5%8F%A4/%E3%80%8A%E8%80%83%E5%8F%A4%E5%AD%A6%E5%88%9D%E9%98%B6%E3%80%8B%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://zhisefu.com/categories/org/</loc>
     <lastmod>2023-02-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://zhisefu.com/categories/org/</loc>
+    <loc>https://zhisefu.com/categories/%E8%80%83%E5%8F%A4/%E3%80%8A%E8%80%83%E5%8F%A4%E5%AD%A6%E5%88%9D%E9%98%B6%E3%80%8B%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2023-02-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
