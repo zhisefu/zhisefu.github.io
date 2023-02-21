@@ -6,7 +6,7 @@
   <link href="https://zhisefu.com/atom.xml" rel="self"/>
   
   <link href="https://zhisefu.com/"/>
-  <updated>2023-02-21T08:56:12.819Z</updated>
+  <updated>2023-02-21T10:01:58.693Z</updated>
   <id>https://zhisefu.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>图书信息</title>
+    <link href="https://zhisefu.com/wiki/15910/"/>
+    <id>https://zhisefu.com/wiki/15910/</id>
+    <published>2023-02-21T09:51:28.000Z</published>
+    <updated>2023-02-21T10:01:58.693Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>名称：</strong> 茶道：从喝茶到懂茶<br><strong>作者：</strong> 蓝戈<br><strong>ISBN：</strong> 978-7-5575-5291-6<br><strong>出版：</strong> 吉林美术出版社<br><strong>版次：</strong> 2020年4月第1版<br><strong>印次：</strong> 2020年8月第2次印刷</p><p><br/>–end–<br/></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;名称：&lt;/strong&gt; 茶道：从喝茶到懂茶&lt;br&gt;&lt;strong&gt;作者：&lt;/strong&gt; 蓝戈&lt;br&gt;&lt;strong&gt;ISBN：&lt;/strong&gt; 978-7-5575-5291-6&lt;br&gt;&lt;strong&gt;出版：&lt;/strong&gt; 吉林美术出版社&lt;br&gt;</summary>
+      
+    
+    
+    
+    <category term="茶道" scheme="https://zhisefu.com/categories/%E8%8C%B6%E9%81%93/"/>
+    
+    <category term="《茶道：从喝茶到懂茶》笔记" scheme="https://zhisefu.com/categories/%E8%8C%B6%E9%81%93/%E3%80%8A%E8%8C%B6%E9%81%93%EF%BC%9A%E4%BB%8E%E5%96%9D%E8%8C%B6%E5%88%B0%E6%87%82%E8%8C%B6%E3%80%8B%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="L1" scheme="https://zhisefu.com/tags/L1/"/>
+    
+    <category term="笔记" scheme="https://zhisefu.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="茶道" scheme="https://zhisefu.com/tags/%E8%8C%B6%E9%81%93/"/>
+    
+  </entry>
   
   <entry>
     <title>走向21世纪的中国考古学</title>
@@ -83,7 +113,7 @@
     <link href="https://zhisefu.com/wiki/55744/"/>
     <id>https://zhisefu.com/wiki/55744/</id>
     <published>2023-02-20T11:58:21.000Z</published>
-    <updated>2023-02-21T09:45:31.028Z</updated>
+    <updated>2023-02-21T09:57:14.013Z</updated>
     
     <content type="html"><![CDATA[<p><strong>名称：</strong> 考古学初阶<br><strong>作者：</strong> 严文明<br><strong>ISBN：</strong> 978-7-5010-5859-4<br><strong>出版发行：</strong> 文物出版社<br><strong>版次：</strong> 2018年12月第1版<br><strong>印次：</strong> 2021年1月第3次印刷</p><p><br/>–end–<br/></p>]]></content>
     
