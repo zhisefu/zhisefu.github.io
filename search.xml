@@ -250,6 +250,54 @@
       </tags>
   </entry>
   <entry>
+    <title>通过yum安装高版本git</title>
+    <url>/wiki/927/</url>
+    <content><![CDATA[<h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>直接使用<code>yum install -y git</code>，安装的 git 版本会比较老。</p>
+<p>对此，官方文档说明如下，</p>
+<blockquote>
+<p>Red Hat Enterprise Linux, Oracle Linux, CentOS, Scientific Linux, et al.<br>RHEL and derivatives typically ship older versions of git. You can download a tarball and build from source, or use a 3rd-party repository such as the IUS Community Project to obtain a more recent version of git.</p>
+</blockquote>
+<p>参考，<br><a href="https://git-scm.com/download/linux">https://git-scm.com/download/linux</a></p>
+<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>根据上述官方文档的描述，解决办法有如下两种，</p>
+<ol>
+<li>通过源码构建；</li>
+<li>使用第三方安装源。</li>
+</ol>
+<p>这里以使用第三方源 <a href="https://ius.io/">IUS Community Project</a> 为例，安装高版本 git 步骤如下，</p>
+<ol>
+<li>检查 git 是否已经安装</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum list installed git*</span><br></pre></td></tr></table></figure>
+
+<p>如果 git 已经安装，先删除，</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum remove -y git*</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>更新 yum 源</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum install -y \ </span><br><span class="line">https://repo.ius.io/ius-release-el7.rpm \ </span><br><span class="line">https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm</span><br></pre></td></tr></table></figure>
+
+<p>参考，<br><a href="https://ius.io/setup">https://ius.io/setup</a></p>
+<ol start="3">
+<li>安装 git</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum install -y git236</span><br></pre></td></tr></table></figure>
+
+<p>其中，<code>git236</code>是 <a href="https://ius.io/">IUS Community Project</a> 中的项目；更多 IUS 项目可以在 <a href="https://github.com/search?q=org:iusrepo+topic:rpm&type=repositories">https://github.com/search?q=org%3Aiusrepo+topic%3Arpm&amp;type=repositories</a> 中查找。</p>
+<p><br/>—end—<br/></p>
+]]></content>
+      <categories>
+        <category>基础工具</category>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>L1</tag>
+        <tag>git</tag>
+        <tag>问题</tag>
+        <tag>yum</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>yum常用命令</title>
     <url>/wiki/36377/</url>
     <content><![CDATA[<h1 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h1><h2 id="列出所有已安装的软件包"><a href="#列出所有已安装的软件包" class="headerlink" title="列出所有已安装的软件包"></a>列出所有已安装的软件包</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum list installed</span><br></pre></td></tr></table></figure>
@@ -309,8 +357,8 @@
       </categories>
       <tags>
         <tag>L1</tag>
-        <tag>总结</tag>
         <tag>yum</tag>
+        <tag>总结</tag>
       </tags>
   </entry>
   <entry>
@@ -417,22 +465,6 @@
 <p>传统的以文献为基础的历史学属于人文学科，与自然科学很少有关系。</p>
 <p>考古学就其研究人类历史的目的来说，也具有人文学科的性质；但就其研究方法来说，则基本上属于自然科学，主要体现在，<br>    1. 田野考古基于，<br>        1. 地质学，<br>        2. 生物学，<br>        3. 人类学，<br>    2. 考古的若干分支学科，<br>        1. 环境考古，例如，根据地质、水文、动植物群落的研究了解环境状况，<br>        2. 动植物考古，例如，通过种子、茎秆、土壤中的孢粉或植硅石的组合研究植物，<br>        3. 农业考古，例如，对于漆木器、纺织品等，考虑如何保护，<br>        4. 冶金考古，例如，检测铜器的成分比例，通过铅同位素分析等探索原料产地，<br>        5. 考古年代学，例如，使用碳-14、铀系、钾氩法、热释光等测定年代。</p>
 <p>考古学和历史学好比车子的两个轮子，一个以实物为基础，一个以文献为基础，缺一不可。</p>
-<p><br/>–end–<br/></p>
-]]></content>
-      <categories>
-        <category>考古</category>
-        <category>《考古学初阶》笔记</category>
-      </categories>
-      <tags>
-        <tag>L1</tag>
-        <tag>笔记</tag>
-        <tag>考古</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>考古学初阶图书信息</title>
-    <url>/wiki/55744/</url>
-    <content><![CDATA[<p><strong>名称：</strong> 考古学初阶<br><strong>作者：</strong> 严文明<br><strong>ISBN：</strong> 978-7-5010-5859-4<br><strong>出版发行：</strong> 文物出版社<br><strong>版次：</strong> 2018年12月第1版<br><strong>印次：</strong> 2021年1月第3次印刷</p>
 <p><br/>–end–<br/></p>
 ]]></content>
       <categories>
@@ -709,76 +741,19 @@
       </tags>
   </entry>
   <entry>
-    <title>通过yum安装高版本git</title>
-    <url>/wiki/927/</url>
-    <content><![CDATA[<h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>直接使用<code>yum install -y git</code>，安装的 git 版本会比较老。</p>
-<p>对此，官方文档说明如下，</p>
-<blockquote>
-<p>Red Hat Enterprise Linux, Oracle Linux, CentOS, Scientific Linux, et al.<br>RHEL and derivatives typically ship older versions of git. You can download a tarball and build from source, or use a 3rd-party repository such as the IUS Community Project to obtain a more recent version of git.</p>
-</blockquote>
-<p>参考，<br><a href="https://git-scm.com/download/linux">https://git-scm.com/download/linux</a></p>
-<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>根据上述官方文档的描述，解决办法有如下两种，</p>
-<ol>
-<li>通过源码构建；</li>
-<li>使用第三方安装源。</li>
-</ol>
-<p>这里以使用第三方源 <a href="https://ius.io/">IUS Community Project</a> 为例，安装高版本 git 步骤如下，</p>
-<ol>
-<li>检查 git 是否已经安装</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum list installed git*</span><br></pre></td></tr></table></figure>
-
-<p>如果 git 已经安装，先删除，</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum remove -y git*</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>更新 yum 源</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum install -y \ </span><br><span class="line">https://repo.ius.io/ius-release-el7.rpm \ </span><br><span class="line">https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm</span><br></pre></td></tr></table></figure>
-
-<p>参考，<br><a href="https://ius.io/setup">https://ius.io/setup</a></p>
-<ol start="3">
-<li>安装 git</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo yum install -y git236</span><br></pre></td></tr></table></figure>
-
-<p>其中，<code>git236</code>是 <a href="https://ius.io/">IUS Community Project</a> 中的项目；更多 IUS 项目可以在 <a href="https://github.com/search?q=org:iusrepo+topic:rpm&type=repositories">https://github.com/search?q=org%3Aiusrepo+topic%3Arpm&amp;type=repositories</a> 中查找。</p>
-<p><br/>—end—<br/></p>
+    <title>考古学初阶图书信息</title>
+    <url>/wiki/55744/</url>
+    <content><![CDATA[<p><strong>名称：</strong> 考古学初阶<br><strong>作者：</strong> 严文明<br><strong>ISBN：</strong> 978-7-5010-5859-4<br><strong>出版发行：</strong> 文物出版社<br><strong>版次：</strong> 2018年12月第1版<br><strong>印次：</strong> 2021年1月第3次印刷</p>
+<p><br/>–end–<br/></p>
 ]]></content>
       <categories>
-        <category>基础工具</category>
-        <category>git</category>
-      </categories>
-      <tags>
-        <tag>L1</tag>
-        <tag>git</tag>
-        <tag>yum</tag>
-        <tag>问题</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>myblog1</title>
-    <url>/wiki/8888/</url>
-    <content><![CDATA[<p>This is blog1.</p>
-<p><a href="images/git-add-new.png" title="blog1 picture">blog1</a></p>
-]]></content>
-      <categories>
-        <category>org</category>
+        <category>考古</category>
+        <category>《考古学初阶》笔记</category>
       </categories>
       <tags>
         <tag>L1</tag>
         <tag>笔记</tag>
         <tag>考古</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>myblog2</title>
-    <url>/wiki/4040/</url>
-    <content><![CDATA[<p>This is blog2.</p>
-<p><a href="images/blog2.jpg" title="blog2 picture">blog2</a></p>
-]]></content>
-      <categories>
-        <category>org</category>
-      </categories>
   </entry>
 </search>

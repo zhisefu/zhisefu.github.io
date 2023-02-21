@@ -6,7 +6,7 @@
   <link href="https://zhisefu.com/atom.xml" rel="self"/>
   
   <link href="https://zhisefu.com/"/>
-  <updated>2023-02-21T09:20:59.179Z</updated>
+  <updated>2023-02-21T08:56:12.819Z</updated>
   <id>https://zhisefu.com/</id>
   
   <author>
@@ -15,30 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>myblog2</title>
-    <link href="https://zhisefu.com/wiki/4040/"/>
-    <id>https://zhisefu.com/wiki/4040/</id>
-    <published>2023-02-21T08:59:21.438Z</published>
-    <updated>2023-02-21T09:20:59.179Z</updated>
-    
-    <content type="html"><![CDATA[<p>This is blog2.</p><p><a href="images/blog2.jpg" title="blog2 picture">blog2</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;This is blog2.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;images/blog2.jpg&quot; title=&quot;blog2 picture&quot;&gt;blog2&lt;/a&gt;&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="org" scheme="https://zhisefu.com/categories/org/"/>
-    
-    
-  </entry>
   
   <entry>
     <title>走向21世纪的中国考古学</title>
@@ -133,36 +109,6 @@
   </entry>
   
   <entry>
-    <title>myblog1</title>
-    <link href="https://zhisefu.com/wiki/8888/"/>
-    <id>https://zhisefu.com/wiki/8888/</id>
-    <published>2023-02-20T11:58:21.000Z</published>
-    <updated>2023-02-21T09:21:01.051Z</updated>
-    
-    <content type="html"><![CDATA[<p>This is blog1.</p><p><a href="images/git-add-new.png" title="blog1 picture">blog1</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;This is blog1.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;images/git-add-new.png&quot; title=&quot;blog1 picture&quot;&gt;blog1&lt;/a&gt;&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="org" scheme="https://zhisefu.com/categories/org/"/>
-    
-    
-    <category term="L1" scheme="https://zhisefu.com/tags/L1/"/>
-    
-    <category term="笔记" scheme="https://zhisefu.com/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="考古" scheme="https://zhisefu.com/tags/%E8%80%83%E5%8F%A4/"/>
-    
-  </entry>
-  
-  <entry>
     <title>git教程之快速上手</title>
     <link href="https://zhisefu.com/wiki/4958/"/>
     <id>https://zhisefu.com/wiki/4958/</id>
@@ -218,9 +164,9 @@
     
     <category term="L1" scheme="https://zhisefu.com/tags/L1/"/>
     
-    <category term="总结" scheme="https://zhisefu.com/tags/%E6%80%BB%E7%BB%93/"/>
-    
     <category term="yum" scheme="https://zhisefu.com/tags/yum/"/>
+    
+    <category term="总结" scheme="https://zhisefu.com/tags/%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
@@ -251,9 +197,9 @@
     
     <category term="git" scheme="https://zhisefu.com/tags/git/"/>
     
-    <category term="yum" scheme="https://zhisefu.com/tags/yum/"/>
-    
     <category term="问题" scheme="https://zhisefu.com/tags/%E9%97%AE%E9%A2%98/"/>
+    
+    <category term="yum" scheme="https://zhisefu.com/tags/yum/"/>
     
   </entry>
   
