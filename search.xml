@@ -1,6 +1,202 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>yum常用命令</title>
+    <url>/wiki/36377/</url>
+    <content><![CDATA[<h1 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h1><h2 id="列出所有已安装的软件包"><a href="#列出所有已安装的软件包" class="headerlink" title="列出所有已安装的软件包"></a>列出所有已安装的软件包</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum list installed</span><br></pre></td></tr></table></figure>
+
+<p>其中，<code>installed</code>表示仅列出<strong>已安装</strong>的软件包。</p>
+<h2 id="列出某个已经安装的软件包"><a href="#列出某个已经安装的软件包" class="headerlink" title="列出某个已经安装的软件包"></a>列出某个已经安装的软件包</h2><p>以 git 为例，</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum list installed git*</span><br></pre></td></tr></table></figure>
+
+<p>其中，</p>
+<ol>
+<li><code>installed</code>限定范围为<strong>已安装</strong>的软件包；</li>
+<li><code>*</code>是通配符，<code>git*</code>限定范围为所有名称以 git 为前缀的软件包。</li>
+</ol>
+<h2 id="列出某个已经安装和可以安装的软件包"><a href="#列出某个已经安装和可以安装的软件包" class="headerlink" title="列出某个已经安装和可以安装的软件包"></a>列出某个已经安装和可以安装的软件包</h2><p>以 git 为例，</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum list git*</span><br></pre></td></tr></table></figure>
+
+<p>其中，</p>
+<ol>
+<li>这里没有<code>installed</code>做限定，因此，会列出所有<strong>已安装</strong>和<strong>可安装</strong>的软件包；</li>
+<li>如上所述，<code>*</code>是通配符，<code>git*</code>限定范围为所有名称以 git 为前缀的软件包。</li>
+</ol>
+<h2 id="列出所有可更新的软件包"><a href="#列出所有可更新的软件包" class="headerlink" title="列出所有可更新的软件包"></a>列出所有可更新的软件包</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum list updates</span><br></pre></td></tr></table></figure>
+
+<p>其中，<code>updates</code>限定了<strong>已安装且有更新</strong>的软件包。</p>
+<h2 id="列出可安装的软件包"><a href="#列出可安装的软件包" class="headerlink" title="列出可安装的软件包"></a>列出可安装的软件包</h2><p>以 git 为例，</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum search git</span><br></pre></td></tr></table></figure>
+
+<p>其中，<code>search</code>表示在 yum 源中查找<strong>名称</strong>或<strong>描述</strong>中包含<code>git</code>这个字符串的软件包。</p>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h2 id="安装某个软件包和相关依赖包"><a href="#安装某个软件包和相关依赖包" class="headerlink" title="安装某个软件包和相关依赖包"></a>安装某个软件包和相关依赖包</h2><p>以 git 为例，</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum install -y git</span><br></pre></td></tr></table></figure>
+
+<p>如果不加<code>-y</code>，会有提示，需要交互式确认，</p>
+<p><img src="/wiki/36377/images/yum-install-y-no.png" alt="yum-install-y-no" title="yum install git"></p>
+<p>其中，<strong>y</strong> 表示 yes，<strong>d</strong> 表示 download only，<strong>N</strong> 表示 No。</p>
+<p>命令中<code>-y</code>的作用就是取消交互式提示、都按输入 <strong>y</strong> 处理。</p>
+<h1 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h1><h2 id="删除某个已经安装的软件包"><a href="#删除某个已经安装的软件包" class="headerlink" title="删除某个已经安装的软件包"></a>删除某个已经安装的软件包</h2><p>以 git 为例，</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum remove -y git*</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>如果不加<code>-y</code>，会有提示，需要交互式确认，</li>
+</ol>
+<p><img src="/wiki/36377/images/yum-remove-y-no.png" alt="yum-remove-y-no" title="yum remove git*"></p>
+<p>其中，<strong>y</strong> 表示 yes，<strong>N</strong> 表示 No。</p>
+<p>命令中<code>-y</code>的作用就是取消交互式提示、都按输入 <strong>y</strong> 处理。</p>
+<ol start="2">
+<li><p>删除软件包时，会自动将相关依赖的软件包一并删除。</p>
+</li>
+<li><p>命令中<code>git*</code>表示删除所有名称以 git 为前缀的软件包。</p>
+</li>
+</ol>
+<p><strong>注意，</strong><br>使用通配符 * 删除前，最好先通过<code>yum list installed git*</code>查看一下已经安装的以<code>git</code>为前缀的软件包、确认是不是都是待删除的，避免误删。</p>
+<p><br/>— end —<br/></p>
+]]></content>
+      <categories>
+        <category>基础工具</category>
+        <category>yum</category>
+      </categories>
+      <tags>
+        <tag>L1</tag>
+        <tag>总结</tag>
+        <tag>yum</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>考古学与历史学</title>
+    <url>/wiki/50129/</url>
+    <content><![CDATA[<h1 id="什么是考古学"><a href="#什么是考古学" class="headerlink" title="什么是考古学"></a>什么是考古学</h1><h2 id="考古学的界定"><a href="#考古学的界定" class="headerlink" title="考古学的界定"></a>考古学的界定</h2><p>书中的表述，</p>
+<blockquote>
+<p>考古学是研究如何寻找和获取古代人类社会的实物遗存，以及如何依据这些遗存来研究人类社会历史的一门科学。</p>
+</blockquote>
+<p>其中要点，</p>
+<ol>
+<li>研究对象：整个古代社会；</li>
+<li>研究资料：实物遗存；</li>
+<li>理论方法：寻找、获取实物遗存，研究人类社会历史。</li>
+</ol>
+<h2 id="考古学的理论基础"><a href="#考古学的理论基础" class="headerlink" title="考古学的理论基础"></a>考古学的理论基础</h2><p>考古学是人文科学与自然科学的结合，</p>
+<ol>
+<li>本质上是一门历史科学；</li>
+<li>实际操作上包含了，<ol>
+<li>地质学的地层学，</li>
+<li>生物学的分类学，</li>
+<li>人类学的文化圈理论。</li>
+</ol>
+</li>
+</ol>
+<h2 id="考古学的任务"><a href="#考古学的任务" class="headerlink" title="考古学的任务"></a>考古学的任务</h2><p>考古学要回答的问题，</p>
+<ol>
+<li>西方学者认为，<ol>
+<li>when</li>
+<li>where</li>
+<li>what</li>
+<li>who</li>
+<li>why</li>
+</ol>
+</li>
+<li>本书认为（比西方学者多了一个“何用”），<ol>
+<li>何时</li>
+<li>何地</li>
+<li>何事</li>
+<li>何人</li>
+<li>何以</li>
+<li>何用（不是为了考古而考古）</li>
+</ol>
+</li>
+</ol>
+<p><strong>个人认为</strong></p>
+<hr>
+<p>“何用”提出得很好，<br>一方面，没有意义的工作一文不值；<br>另一方面，明确目的和意义，可以更好地引导工作朝着明确的方向进行。</p>
+<hr>
+<h1 id="考古学的发展过程"><a href="#考古学的发展过程" class="headerlink" title="考古学的发展过程"></a>考古学的发展过程</h1><h2 id="时代划分"><a href="#时代划分" class="headerlink" title="时代划分"></a>时代划分</h2><ol>
+<li><p>1836年，丹麦C.J.汤姆森正式提出根据制造工具的材料划分时代，</p>
+<ol>
+<li>石器时代，</li>
+<li>青铜时代，</li>
+<li>铁器时代。</li>
+</ol>
+</li>
+<li><p>东汉袁康在《越绝书•外卷•记宝剑第十三》中提到，春秋风胡子对楚昭王（公元前515-前489年在位）说过一段话，对不同时代的器物材料进行了划分，</p>
+</li>
+</ol>
+<blockquote>
+<p>轩辕、神农、赫胥之时以石为兵，断树木为宫室，死而龙藏，夫神主使然。至黄帝之时以玉为兵，以伐树木为宫室，凿地。夫玉亦神物也，又遇圣主使然，死而龙藏。禹穴之时以铜为兵，以凿伊阙通龙门，决江导河，东注于海，天下通平，治为宫室，岂非圣主之力哉！当此之时作铁兵，威服三军，天下闻之莫敢不服，此亦铁兵之神。</p>
+</blockquote>
+<p>这段话中的“兵”，不单指“威服三军”的兵器，也包括“伐树木”、“凿地”、“决江导河”的生产工具。</p>
+<p>根据上述记载，按照工具的材料可将时代划分为，<br>    1. 石器时代，<br>    2. 玉器时代，<br>    3. 铜器时代，<br>    4. 铁器时代。</p>
+<p>然而，<br>    1. 三期说在欧亚大陆较为通用，“玉器时代”在中国可用、在其他国家不适用；<br>    2. 玉器时代也是铜石并用时代。<br>因此，仍采用三期说。</p>
+<h2 id="古代金石学"><a href="#古代金石学" class="headerlink" title="古代金石学"></a>古代金石学</h2><p>历代都有对古物古迹研究的记载，到宋代发展为金石学。</p>
+<p>宋代流传至今的金石学著作有22种，其中最重要的有，</p>
+<ol>
+<li>吕大临的《考古图》（1092年），</li>
+<li>官修的《宣和博古图》（1098年）。</li>
+</ol>
+<p>清代由于乾嘉学派的推动，金石学或古器物学得到极大的发展，留下的相关著作近千种。（注：容媛《金石学录目》，中央研究院历史语言研究所单刊乙种之二，1930年）</p>
+<p>金石学或古器物学没有建立起获取资料的科学方法，难以直接发展为考古学。</p>
+<p>真正意义上的考古学实在进化论思想基础上，借用地质地层学和生物分类学的方法并加以适当改造，才得以产生的。</p>
+<h2 id="近代考古学"><a href="#近代考古学" class="headerlink" title="近代考古学"></a>近代考古学</h2><ol>
+<li><p>查尔斯•莱伊尔（Charles Lyell）于1830-1833年陆续发表四卷本《地质学原理》（Principles of Geology），第一次建立起科学的地质地层学，为考古学提供了科学支持。</p>
+</li>
+<li><p>1836年，C.J.汤姆森依据工具质地划分三个时期，奠定了近代考古学的基础。</p>
+</li>
+<li><p>1903年，瑞典人蒙特留斯（G.O.A.Montelius）的《方法论：器物类型学》出版，是考古类型学的奠基性著作，为考古学者采用，对建立各地的文化谱系发挥了极大的作用。</p>
+</li>
+</ol>
+<p>真正科学考古，建立在<strong>地质地层学</strong>和<strong>类型学</strong>之上，到20世纪初才算完成。</p>
+<p>中国的考古学，开始于1921年正式发掘河南渑池县仰韶村新石器时代遗址。</p>
+<h1 id="考古学与历史学的关系"><a href="#考古学与历史学的关系" class="headerlink" title="考古学与历史学的关系"></a>考古学与历史学的关系</h1><ol>
+<li><strong>考古学扩大了历史研究的地域</strong></li>
+</ol>
+<p>传统的历史学主要是文化比较发达并且有自己文字记载的民族的历史，但世界上大部分民族没有自己的文字，在地理大发现之前，许多民族不为有文字的民族所知，因此，他们的历史不会被记录下来。</p>
+<p>考古学不受文字的局限。例如，殖民者进入前的美洲历史、大洋洲历史、非洲中南部历史，都是由考古学逐渐探明的。</p>
+<ol start="2">
+<li><strong>考古学延伸了历史研究的时间</strong></li>
+</ol>
+<p>传统的历史研究靠的是文献记载，存在问题，<br>    1. 文字出现之前的历史无从知晓；<br>    2. 文献容易失传。</p>
+<p>考古学根据人类遗迹来研究历史、不受文献记载的限制，只要有人类出现并且有遗迹存留，经考古学者发现、研究，就可以在一定程度上复原当时的历史。</p>
+<ol start="3">
+<li><strong>考古学拓展和充实了历史研究的内容</strong></li>
+</ol>
+<p>文献记载的历史，<br>    1. 多偏重于上层社会（如宫廷史、政治史、军事史、文化史、人物传记等），缺乏下层民众的生活记述（如生产和经济活动）；<br>    2. 过于宏观，不够具体。</p>
+<p>考古学研究，<br>    1. 不分阶层，一例看待；<br>    2. 发现的实物有实感、更具体。<br>从而，大大充实了历史学研究的内容。</p>
+<ol start="4">
+<li><strong>考古学使历史研究走上科学化的轨道</strong></li>
+</ol>
+<p>传统的以文献为基础的历史学属于人文学科，与自然科学很少有关系。</p>
+<p>考古学就其研究人类历史的目的来说，也具有人文学科的性质；但就其研究方法来说，则基本上属于自然科学，主要体现在，<br>    1. 田野考古基于，<br>        1. 地质学，<br>        2. 生物学，<br>        3. 人类学，<br>    2. 考古的若干分支学科，<br>        1. 环境考古，例如，根据地质、水文、动植物群落的研究了解环境状况，<br>        2. 动植物考古，例如，通过种子、茎秆、土壤中的孢粉或植硅石的组合研究植物，<br>        3. 农业考古，例如，对于漆木器、纺织品等，考虑如何保护，<br>        4. 冶金考古，例如，检测铜器的成分比例，通过铅同位素分析等探索原料产地，<br>        5. 考古年代学，例如，使用碳-14、铀系、钾氩法、热释光等测定年代。</p>
+<p>考古学和历史学好比车子的两个轮子，一个以实物为基础，一个以文献为基础，缺一不可。</p>
+<p><br/>–end–<br/></p>
+]]></content>
+      <categories>
+        <category>考古</category>
+        <category>《考古学初阶》笔记</category>
+      </categories>
+      <tags>
+        <tag>L1</tag>
+        <tag>笔记</tag>
+        <tag>考古</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>考古学初阶图书信息</title>
+    <url>/wiki/55744/</url>
+    <content><![CDATA[<p><strong>名称：</strong> 考古学初阶<br><strong>作者：</strong> 严文明<br><strong>ISBN：</strong> 978-7-5010-5859-4<br><strong>出版发行：</strong> 文物出版社<br><strong>版次：</strong> 2018年12月第1版<br><strong>印次：</strong> 2021年1月第3次印刷</p>
+<p><br/>–end–<br/></p>
+]]></content>
+      <categories>
+        <category>考古</category>
+        <category>《考古学初阶》笔记</category>
+      </categories>
+      <tags>
+        <tag>L1</tag>
+        <tag>笔记</tag>
+        <tag>考古</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>git教程之快速上手</title>
     <url>/wiki/4958/</url>
     <content><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>引用官方介绍，如下，</p>
@@ -250,203 +446,7 @@
       </tags>
   </entry>
   <entry>
-    <title>yum常用命令</title>
-    <url>/wiki/36377/</url>
-    <content><![CDATA[<h1 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h1><h2 id="列出所有已安装的软件包"><a href="#列出所有已安装的软件包" class="headerlink" title="列出所有已安装的软件包"></a>列出所有已安装的软件包</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum list installed</span><br></pre></td></tr></table></figure>
-
-<p>其中，<code>installed</code>表示仅列出<strong>已安装</strong>的软件包。</p>
-<h2 id="列出某个已经安装的软件包"><a href="#列出某个已经安装的软件包" class="headerlink" title="列出某个已经安装的软件包"></a>列出某个已经安装的软件包</h2><p>以 git 为例，</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum list installed git*</span><br></pre></td></tr></table></figure>
-
-<p>其中，</p>
-<ol>
-<li><code>installed</code>限定范围为<strong>已安装</strong>的软件包；</li>
-<li><code>*</code>是通配符，<code>git*</code>限定范围为所有名称以 git 为前缀的软件包。</li>
-</ol>
-<h2 id="列出某个已经安装和可以安装的软件包"><a href="#列出某个已经安装和可以安装的软件包" class="headerlink" title="列出某个已经安装和可以安装的软件包"></a>列出某个已经安装和可以安装的软件包</h2><p>以 git 为例，</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum list git*</span><br></pre></td></tr></table></figure>
-
-<p>其中，</p>
-<ol>
-<li>这里没有<code>installed</code>做限定，因此，会列出所有<strong>已安装</strong>和<strong>可安装</strong>的软件包；</li>
-<li>如上所述，<code>*</code>是通配符，<code>git*</code>限定范围为所有名称以 git 为前缀的软件包。</li>
-</ol>
-<h2 id="列出所有可更新的软件包"><a href="#列出所有可更新的软件包" class="headerlink" title="列出所有可更新的软件包"></a>列出所有可更新的软件包</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum list updates</span><br></pre></td></tr></table></figure>
-
-<p>其中，<code>updates</code>限定了<strong>已安装且有更新</strong>的软件包。</p>
-<h2 id="列出可安装的软件包"><a href="#列出可安装的软件包" class="headerlink" title="列出可安装的软件包"></a>列出可安装的软件包</h2><p>以 git 为例，</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum search git</span><br></pre></td></tr></table></figure>
-
-<p>其中，<code>search</code>表示在 yum 源中查找<strong>名称</strong>或<strong>描述</strong>中包含<code>git</code>这个字符串的软件包。</p>
-<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h2 id="安装某个软件包和相关依赖包"><a href="#安装某个软件包和相关依赖包" class="headerlink" title="安装某个软件包和相关依赖包"></a>安装某个软件包和相关依赖包</h2><p>以 git 为例，</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum install -y git</span><br></pre></td></tr></table></figure>
-
-<p>如果不加<code>-y</code>，会有提示，需要交互式确认，</p>
-<p><img src="/wiki/36377/images/yum-install-y-no.png" alt="yum-install-y-no" title="yum install git"></p>
-<p>其中，<strong>y</strong> 表示 yes，<strong>d</strong> 表示 download only，<strong>N</strong> 表示 No。</p>
-<p>命令中<code>-y</code>的作用就是取消交互式提示、都按输入 <strong>y</strong> 处理。</p>
-<h1 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h1><h2 id="删除某个已经安装的软件包"><a href="#删除某个已经安装的软件包" class="headerlink" title="删除某个已经安装的软件包"></a>删除某个已经安装的软件包</h2><p>以 git 为例，</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum remove -y git*</span><br></pre></td></tr></table></figure>
-
-<ol>
-<li>如果不加<code>-y</code>，会有提示，需要交互式确认，</li>
-</ol>
-<p><img src="/wiki/36377/images/yum-remove-y-no.png" alt="yum-remove-y-no" title="yum remove git*"></p>
-<p>其中，<strong>y</strong> 表示 yes，<strong>N</strong> 表示 No。</p>
-<p>命令中<code>-y</code>的作用就是取消交互式提示、都按输入 <strong>y</strong> 处理。</p>
-<ol start="2">
-<li><p>删除软件包时，会自动将相关依赖的软件包一并删除。</p>
-</li>
-<li><p>命令中<code>git*</code>表示删除所有名称以 git 为前缀的软件包。</p>
-</li>
-</ol>
-<p><strong>注意，</strong><br>使用通配符 * 删除前，最好先通过<code>yum list installed git*</code>查看一下已经安装的以<code>git</code>为前缀的软件包、确认是不是都是待删除的，避免误删。</p>
-<p><br/>— end —<br/></p>
-]]></content>
-      <categories>
-        <category>基础工具</category>
-        <category>yum</category>
-      </categories>
-      <tags>
-        <tag>L1</tag>
-        <tag>总结</tag>
-        <tag>yum</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>考古学初阶之考古学与历史学</title>
-    <url>/wiki/50129/</url>
-    <content><![CDATA[<h1 id="什么是考古学"><a href="#什么是考古学" class="headerlink" title="什么是考古学"></a>什么是考古学</h1><h2 id="考古学的界定"><a href="#考古学的界定" class="headerlink" title="考古学的界定"></a>考古学的界定</h2><p>书中的表述，</p>
-<blockquote>
-<p>考古学是研究如何寻找和获取古代人类社会的实物遗存，以及如何依据这些遗存来研究人类社会历史的一门科学。</p>
-</blockquote>
-<p>其中要点，</p>
-<ol>
-<li>研究对象：整个古代社会；</li>
-<li>研究资料：实物遗存；</li>
-<li>理论方法：寻找、获取实物遗存，研究人类社会历史。</li>
-</ol>
-<h2 id="考古学的理论基础"><a href="#考古学的理论基础" class="headerlink" title="考古学的理论基础"></a>考古学的理论基础</h2><p>考古学是人文科学与自然科学的结合，</p>
-<ol>
-<li>本质上是一门历史科学；</li>
-<li>实际操作上包含了，<ol>
-<li>地质学的地层学，</li>
-<li>生物学的分类学，</li>
-<li>人类学的文化圈理论。</li>
-</ol>
-</li>
-</ol>
-<h2 id="考古学的任务"><a href="#考古学的任务" class="headerlink" title="考古学的任务"></a>考古学的任务</h2><p>考古学要回答的问题，</p>
-<ol>
-<li>西方学者认为，<ol>
-<li>when</li>
-<li>where</li>
-<li>what</li>
-<li>who</li>
-<li>why</li>
-</ol>
-</li>
-<li>本书认为（比西方学者多了一个“何用”），<ol>
-<li>何时</li>
-<li>何地</li>
-<li>何事</li>
-<li>何人</li>
-<li>何以</li>
-<li>何用（不是为了考古而考古）</li>
-</ol>
-</li>
-</ol>
-<p><strong>个人认为</strong></p>
-<hr>
-<p>“何用”提出得很好，<br>一方面，没有意义的工作一文不值；<br>另一方面，明确目的和意义，可以更好地引导工作朝着明确的方向进行。</p>
-<hr>
-<h1 id="考古学的发展过程"><a href="#考古学的发展过程" class="headerlink" title="考古学的发展过程"></a>考古学的发展过程</h1><h2 id="时代划分"><a href="#时代划分" class="headerlink" title="时代划分"></a>时代划分</h2><ol>
-<li><p>1836年，丹麦C.J.汤姆森正式提出根据制造工具的材料划分时代，</p>
-<ol>
-<li>石器时代，</li>
-<li>青铜时代，</li>
-<li>铁器时代。</li>
-</ol>
-</li>
-<li><p>东汉袁康在《越绝书•外卷•记宝剑第十三》中提到，春秋风胡子对楚昭王（公元前515-前489年在位）说过一段话，对不同时代的器物材料进行了划分，</p>
-</li>
-</ol>
-<blockquote>
-<p>轩辕、神农、赫胥之时以石为兵，断树木为宫室，死而龙藏，夫神主使然。至黄帝之时以玉为兵，以伐树木为宫室，凿地。夫玉亦神物也，又遇圣主使然，死而龙藏。禹穴之时以铜为兵，以凿伊阙通龙门，决江导河，东注于海，天下通平，治为宫室，岂非圣主之力哉！当此之时作铁兵，威服三军，天下闻之莫敢不服，此亦铁兵之神。</p>
-</blockquote>
-<p>这段话中的“兵”，不单指“威服三军”的兵器，也包括“伐树木”、“凿地”、“决江导河”的生产工具。</p>
-<p>根据上述记载，按照工具的材料可将时代划分为，<br>    1. 石器时代，<br>    2. 玉器时代，<br>    3. 铜器时代，<br>    4. 铁器时代。</p>
-<p>然而，<br>    1. 三期说在欧亚大陆较为通用，“玉器时代”在中国可用、在其他国家不适用；<br>    2. 玉器时代也是铜石并用时代。<br>因此，仍采用三期说。</p>
-<h2 id="古代金石学"><a href="#古代金石学" class="headerlink" title="古代金石学"></a>古代金石学</h2><p>历代都有对古物古迹研究的记载，到宋代发展为金石学。</p>
-<p>宋代流传至今的金石学著作有22种，其中最重要的有，</p>
-<ol>
-<li>吕大临的《考古图》（1092年），</li>
-<li>官修的《宣和博古图》（1098年）。</li>
-</ol>
-<p>清代由于乾嘉学派的推动，金石学或古器物学得到极大的发展，留下的相关著作近千种。（注：容媛《金石学录目》，中央研究院历史语言研究所单刊乙种之二，1930年）</p>
-<p>金石学或古器物学没有建立起获取资料的科学方法，难以直接发展为考古学。</p>
-<p>真正意义上的考古学实在进化论思想基础上，借用地质地层学和生物分类学的方法并加以适当改造，才得以产生的。</p>
-<h2 id="近代考古学"><a href="#近代考古学" class="headerlink" title="近代考古学"></a>近代考古学</h2><ol>
-<li><p>查尔斯•莱伊尔（Charles Lyell）于1830-1833年陆续发表四卷本《地质学原理》（Principles of Geology），第一次建立起科学的地质地层学，为考古学提供了科学支持。</p>
-</li>
-<li><p>1836年，C.J.汤姆森依据工具质地划分三个时期，奠定了近代考古学的基础。</p>
-</li>
-<li><p>1903年，瑞典人蒙特留斯（G.O.A.Montelius）的《方法论：器物类型学》出版，是考古类型学的奠基性著作，为考古学者采用，对建立各地的文化谱系发挥了极大的作用。</p>
-</li>
-</ol>
-<p>真正科学考古，建立在<strong>地质地层学</strong>和<strong>类型学</strong>之上，到20世纪初才算完成。</p>
-<p>中国的考古学，开始于1921年正式发掘河南渑池县仰韶村新石器时代遗址。</p>
-<h1 id="考古学与历史学的关系"><a href="#考古学与历史学的关系" class="headerlink" title="考古学与历史学的关系"></a>考古学与历史学的关系</h1><ol>
-<li><strong>考古学扩大了历史研究的地域</strong></li>
-</ol>
-<p>传统的历史学主要是文化比较发达并且有自己文字记载的民族的历史，但世界上大部分民族没有自己的文字，在地理大发现之前，许多民族不为有文字的民族所知，因此，他们的历史不会被记录下来。</p>
-<p>考古学不受文字的局限。例如，殖民者进入前的美洲历史、大洋洲历史、非洲中南部历史，都是由考古学逐渐探明的。</p>
-<ol start="2">
-<li><strong>考古学延伸了历史研究的时间</strong></li>
-</ol>
-<p>传统的历史研究靠的是文献记载，存在问题，<br>    1. 文字出现之前的历史无从知晓；<br>    2. 文献容易失传。</p>
-<p>考古学根据人类遗迹来研究历史、不受文献记载的限制，只要有人类出现并且有遗迹存留，经考古学者发现、研究，就可以在一定程度上复原当时的历史。</p>
-<ol start="3">
-<li><strong>考古学拓展和充实了历史研究的内容</strong></li>
-</ol>
-<p>文献记载的历史，<br>    1. 多偏重于上层社会（如宫廷史、政治史、军事史、文化史、人物传记等），缺乏下层民众的生活记述（如生产和经济活动）；<br>    2. 过于宏观，不够具体。</p>
-<p>考古学研究，<br>    1. 不分阶层，一例看待；<br>    2. 发现的实物有实感、更具体。<br>从而，大大充实了历史学研究的内容。</p>
-<ol start="4">
-<li><strong>考古学使历史研究走上科学化的轨道</strong></li>
-</ol>
-<p>传统的以文献为基础的历史学属于人文学科，与自然科学很少有关系。</p>
-<p>考古学就其研究人类历史的目的来说，也具有人文学科的性质；但就其研究方法来说，则基本上属于自然科学，主要体现在，<br>    1. 田野考古基于，<br>        1. 地质学，<br>        2. 生物学，<br>        3. 人类学，<br>    2. 考古的若干分支学科，<br>        1. 环境考古，例如，根据地质、水文、动植物群落的研究了解环境状况，<br>        2. 动植物考古，例如，通过种子、茎秆、土壤中的孢粉或植硅石的组合研究植物，<br>        3. 农业考古，例如，对于漆木器、纺织品等，考虑如何保护，<br>        4. 冶金考古，例如，检测铜器的成分比例，通过铅同位素分析等探索原料产地，<br>        5. 考古年代学，例如，使用碳-14、铀系、钾氩法、热释光等测定年代。</p>
-<p>考古学和历史学好比车子的两个轮子，一个以实物为基础，一个以文献为基础，缺一不可。</p>
-<p><br/>–end–<br/></p>
-]]></content>
-      <categories>
-        <category>考古</category>
-        <category>《考古学初阶》笔记</category>
-      </categories>
-      <tags>
-        <tag>L1</tag>
-        <tag>笔记</tag>
-        <tag>考古</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>考古学初阶之图书信息</title>
-    <url>/wiki/55744/</url>
-    <content><![CDATA[<p><strong>名称：</strong> 考古学初阶<br><strong>作者：</strong> 严文明<br><strong>ISBN：</strong> 978-7-5010-5859-4<br><strong>出版发行：</strong> 文物出版社<br><strong>版次：</strong> 2018年12月第1版<br><strong>印次：</strong> 2021年1月第3次印刷</p>
-<p><br/>–end–<br/></p>
-]]></content>
-      <categories>
-        <category>考古</category>
-        <category>《考古学初阶》笔记</category>
-      </categories>
-      <tags>
-        <tag>L1</tag>
-        <tag>笔记</tag>
-        <tag>考古</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>考古学初阶之走向21世纪的中国考古学</title>
+    <title>走向21世纪的中国考古学</title>
     <url>/wiki/57379/</url>
     <content><![CDATA[<h1 id="考古学发展阶段"><a href="#考古学发展阶段" class="headerlink" title="考古学发展阶段"></a>考古学发展阶段</h1><p>中国考古学与世界考古学的发展阶段大致相同，</p>
 <ol>
@@ -751,8 +751,8 @@
       </categories>
       <tags>
         <tag>L1</tag>
-        <tag>git</tag>
         <tag>yum</tag>
+        <tag>git</tag>
         <tag>问题</tag>
       </tags>
   </entry>
