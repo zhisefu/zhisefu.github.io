@@ -758,13 +758,18 @@
   </entry>
   <entry>
     <title>myblog1</title>
-    <url>/wiki/3720/</url>
+    <url>/wiki/8888/</url>
     <content><![CDATA[<p>This is blog1.</p>
 <p><a href="images/blog1.jpg" title="blog1">blog1</a></p>
 ]]></content>
       <categories>
         <category>org</category>
       </categories>
+      <tags>
+        <tag>L1</tag>
+        <tag>笔记</tag>
+        <tag>考古</tag>
+      </tags>
   </entry>
   <entry>
     <title></title>
