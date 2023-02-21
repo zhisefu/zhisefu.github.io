@@ -760,7 +760,7 @@
     <title>myblog1</title>
     <url>/wiki/8888/</url>
     <content><![CDATA[<p>This is blog1.</p>
-<p><a href="images/blog1.jpg" title="blog1">blog1</a></p>
+<p><a href="images/git-add-new.png" title="blog1">blog1</a></p>
 ]]></content>
       <categories>
         <category>org</category>
