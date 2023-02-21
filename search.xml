@@ -760,7 +760,7 @@
     <title>myblog1</title>
     <url>/wiki/8888/</url>
     <content><![CDATA[<p>This is blog1.</p>
-<p><a href="images/git-add-new.png" title="blog1">blog1</a></p>
+<p><a href="images/git-add-new.png" title="blog1 picture">blog1</a></p>
 ]]></content>
       <categories>
         <category>org</category>
@@ -772,10 +772,10 @@
       </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>/wiki/1/</url>
+    <title>myblog2</title>
+    <url>/wiki/4040/</url>
     <content><![CDATA[<p>This is blog2.</p>
-<p><a href="images/blog2.jpg" title="blog2">blog2</a></p>
+<p><a href="images/blog2.jpg" title="blog2 picture">blog2</a></p>
 ]]></content>
       <categories>
         <category>org</category>
